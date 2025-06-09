@@ -1,0 +1,24 @@
+[user]
+	email = takumi.062757@gmail.com
+	name = nyatinte
+
+[init]
+	defaultBranch = main
+
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	light = false
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	df = diff
+	lg = log --oneline --decorate --all --graph

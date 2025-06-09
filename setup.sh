@@ -1,47 +1,47 @@
 #!/bin/bash
 
-# dotfiles setup script
-# Creates symbolic links for configuration files
+# dotfiles セットアップスクリプト
+# 設定ファイルのシンボリックリンクを作成
 
 DOTFILES_DIR="$HOME/my_programs/dotfiles"
 
-echo "Setting up dotfiles..."
+echo "dotfiles をセットアップしています..."
 
-# Function to create symbolic link with backup
+# バックアップ付きシンボリックリンクを作成する関数
 create_symlink() {
     local source="$1"
     local target="$2"
     
-    # Create target directory if it doesn't exist
+    # ターゲットディレクトリが存在しない場合は作成
     mkdir -p "$(dirname "$target")"
     
-    # Backup existing file if it exists and is not a symlink
+    # 既存ファイルがあり、シンボリックリンクでない場合はバックアップ
     if [ -f "$target" ] && [ ! -L "$target" ]; then
-        echo "Backing up existing $target to $target.backup"
+        echo "既存の $target を $target.backup にバックアップしています"
         mv "$target" "$target.backup"
     fi
     
-    # Remove existing symlink
+    # 既存のシンボリックリンクを削除
     if [ -L "$target" ]; then
         rm "$target"
     fi
     
-    # Create new symlink
+    # 新しいシンボリックリンクを作成
     ln -s "$source" "$target"
-    echo "Created symlink: $target -> $source"
+    echo "シンボリックリンクを作成しました: $target -> $source"
 }
 
-# Git configuration
-create_symlink "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
+# Git 設定
+create_symlink "$DOTFILES_DIR/git/gitconfig" "$HOME/.gitconfig"
 
-# Zsh configuration
+# Zsh 設定
 create_symlink "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
 
-# Starship configuration
-create_symlink "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
+# Starship 設定
+create_symlink "$DOTFILES_DIR/starship/starship.toml" "$HOME/.config/starship.toml"
 
-# Ghostty configuration
+# Ghostty 設定
 create_symlink "$DOTFILES_DIR/ghostty/config" "$HOME/.config/ghostty/config"
 
-echo "Setup complete!"
-echo "Please restart your shell or run 'source ~/.zshrc' to apply changes."
+echo "セットアップが完了しました！"
+echo "シェルを再起動するか 'source ~/.zshrc' を実行して変更を適用してください。"

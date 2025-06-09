@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+# Zsh設定ファイル - 分割されたモジュール式設定
+
+# 設定ファイルのベースディレクトリ
+ZSH_CONFIG_DIR="${${(%):-%N}:A:h}"
+
+# 各設定ファイルを読み込み
+source "${ZSH_CONFIG_DIR}/path.zsh"
+source "${ZSH_CONFIG_DIR}/dev-tools.zsh"
+source "${ZSH_CONFIG_DIR}/aliases.zsh"
+
+# Starship プロンプトを初期化
+eval "$(starship init zsh)"
+
+# Zshプラグイン
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

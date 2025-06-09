@@ -26,7 +26,7 @@ $time\
 \n$character"""
 
 [directory]
-style = "fg:#b7e3b0 bg:#a9d6b4"  # --color-1 fg, --color-2 bg
+style = "fg:#2a494c bg:#a9d6b4"  # --color-5 fg, --color-2 bg
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -40,11 +40,11 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:#7cb1a3"  # --color-3 bg
-format = '[[ $symbol $branch ](fg:#b7e3b0 bg:#7cb1a3)]($style)'
+format = '[[ $symbol $branch ](fg:#ffffff bg:#7cb1a3)]($style)'
 
 [git_status]
 style = "bg:#7cb1a3"  # --color-3 bg
-format = '[[($all_status$ahead_behind )](fg:#b7e3b0 bg:#7cb1a3)]($style)'
+format = '[[($all_status$ahead_behind )](fg:#ffffff bg:#7cb1a3)]($style)'
 
 [nodejs]
 symbol = ""

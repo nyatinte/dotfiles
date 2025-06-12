@@ -16,3 +16,9 @@ eval "$(starship init zsh)"
 # Zshプラグイン
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# bun completions
+[ -s "/Users/nyante/.bun/_bun" ] && source "/Users/nyante/.bun/_bun"
+alias claude="/Users/nyante/.claude/local/claude"
+
+# エディター設定（Claude Code用）
+export VISUAL="code"

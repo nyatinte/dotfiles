@@ -39,5 +39,6 @@ alias glog='git log --oneline --graph --decorate'
 alias reload='source ~/.zshrc'
 
 # Claude Code便利エイリアス
+alias cc='claude'
 alias yolo="claude --dangerously-skip-permissions"
 alias ccc="git commit -m \"\$(claude -p \"Look at the staged git changes and create a summarizing git commit title. Only respond with the title and no affirmation.\")\""

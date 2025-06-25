@@ -1,6 +1,13 @@
 # Theme
 theme = Everblush
 
+# Selection
+selection-background = #404040
+selection-invert-fg-bg = true
+
+# Background opacity
+background-opacity = 0.85
+
 # Font
 font-family = JetBrainsMonoNL Nerd Font Mono
 font-feature = -dlig
@@ -27,12 +34,15 @@ macos-titlebar-style = transparent
 macos-window-shadow = false
 
 # Window
+window-height = 30
+window-width = 110
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = true
+window-vsync = true
 
 # Shell
-shell-integration-features = no-cursor
+shell-integration = detect
 
 # Cursor
 cursor-style = block
@@ -44,3 +54,10 @@ cursor-opacity = 0.8
 mouse-hide-while-typing = true
 resize-overlay = never
 keybind = shift+enter=text:\n
+copy-on-select = true
+clipboard-read = allow
+clipboard-write = allow
+
+# Custom Shader
+# TODO: Please set your favorite background shader.
+custom-shader = ./shaders/background.glsl

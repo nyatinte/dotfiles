@@ -19,9 +19,6 @@ alias find='fd'
 # grepの代替 - 高速grep
 alias grep='rg'
 
-# ディレクトリ移動 - zoxide
-alias cd='z'
-
 # Git便利エイリアス
 alias g='git'
 alias gs='git status'

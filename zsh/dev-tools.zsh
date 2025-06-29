@@ -18,3 +18,7 @@ source <(fzf --zsh)
 
 # zoxide - smarter cd command
 eval "$(zoxide init zsh)"
+
+# ni - package manager
+export NI_DEFAULT_AGENT="bun"
+export NI_GLOBAL_AGENT="bun"

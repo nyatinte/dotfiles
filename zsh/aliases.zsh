@@ -38,4 +38,7 @@ alias reload='source ~/.zshrc'
 # Claude Code便利エイリアス
 alias cc='claude'
 alias yolo="claude --dangerously-skip-permissions"
-alias ccc="git commit -m \"\$(claude -p \"Look at the staged git changes and create a summarizing git commit title. Only respond with the title and no affirmation.\")\""
+alias ccc="git commit -m \"$(claude -p \"Look at the staged git changes and create a summarizing git commit title. Only respond with the title and no affirmation.\")\""
+
+# rmの代替 - ゴミ箱に移動
+alias rm='safe-rm'

@@ -9,7 +9,7 @@ selection-invert-fg-bg = true
 background-opacity = 0.85
 
 # Font
-font-family = JetBrainsMonoNL Nerd Font Mono
+font-family = "Moralerspace Krypton NF"
 font-feature = -dlig
 font-size = 17
 

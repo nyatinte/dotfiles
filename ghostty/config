@@ -60,4 +60,4 @@ clipboard-write = allow
 
 # Custom Shader
 # TODO: Please set your favorite background shader.
-custom-shader = ./shaders/background.glsl
+# custom-shader = ./shaders/background.glsl

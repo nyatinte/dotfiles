@@ -8,7 +8,7 @@ ZSH_CONFIG_DIR="${${(%):-%N}:A:h}"
 source "${ZSH_CONFIG_DIR}/path.zsh"
 source "${ZSH_CONFIG_DIR}/dev-tools.zsh"
 source "${ZSH_CONFIG_DIR}/aliases.zsh"
-source "${ZSH_CONFIG_DIR}/fzf.zsh"
+# source "${ZSH_CONFIG_DIR}/fzf.zsh"
 
 # Starship プロンプトを初期化
 eval "$(starship init zsh)"
@@ -21,3 +21,5 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # エディター設定（Claude Code用）
 export VISUAL="code"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

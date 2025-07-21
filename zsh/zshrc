@@ -6,6 +6,7 @@ ZSH_CONFIG_DIR="${${(%):-%N}:A:h}"
 
 # 各設定ファイルを読み込み
 source "${ZSH_CONFIG_DIR}/path.zsh"
+source "${ZSH_CONFIG_DIR}/proto.zsh"
 source "${ZSH_CONFIG_DIR}/dev-tools.zsh"
 source "${ZSH_CONFIG_DIR}/aliases.zsh"
 # source "${ZSH_CONFIG_DIR}/fzf.zsh"
@@ -16,10 +17,8 @@ eval "$(starship init zsh)"
 # Zshプラグイン
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# bun completions
-[ -s "/Users/nyante/.bun/_bun" ] && source "/Users/nyante/.bun/_bun"
-
 # エディター設定（Claude Code用）
 export VISUAL="code"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+

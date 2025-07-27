@@ -20,6 +20,7 @@ $nodejs\
 $rust\
 $python\
 $golang\
+$bun\
 [](fg:#3b7981 bg:#2a494c)\
 $time\
 [](fg:#2a494c)\
@@ -47,24 +48,29 @@ style = "bg:#7cb1a3"  # --color-3 bg
 format = '[[($all_status$ahead_behind )](fg:#ffffff bg:#7cb1a3)]($style)'
 
 [nodejs]
-symbol = ""
+symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
 
 [rust]
-symbol = ""
+symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
 
 [python]
-symbol = ""
+symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
 
 [golang]
-symbol = ""
+symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#3b7981"  # --color-4 bg
+format = '[[ $symbol ($version) ](fg:#b7e3b0  bg:#3b7981)]($style)'
 
 [time]
 disabled = false

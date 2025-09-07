@@ -26,6 +26,8 @@ $time\
 [](fg:#2a494c)\
 \n$character"""
 
+command_timeout = 2000
+
 [directory]
 style = "fg:#2a494c bg:#a9d6b4"  # --color-5 fg, --color-2 bg
 format = "[ $path ]($style)"

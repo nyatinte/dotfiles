@@ -10,6 +10,10 @@ source <(fzf --zsh)
 # zoxide - smarter cd command
 eval "$(zoxide init zsh)"
 
+autoload -Uz compinit
+compinit
+eval "$(wtp completion zsh)"
+
 # ni - package manager
 export NI_DEFAULT_AGENT="pnpm"
 export NI_GLOBAL_AGENT="pnpm"

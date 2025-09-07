@@ -17,5 +17,6 @@ path=(
   /usr/local/bin(N-/)
   /usr/local/sbin(N-/)
   /Library/Apple/usr/bin
+  $HOME/.local/bin
 )
 

@@ -27,7 +27,7 @@ adjust-cell-height = 2
 
 # Quick Terminal
 quick-terminal-position = bottom
-keybind = global:ctrl+f=toggle_quick_terminal
+keybind = global:ctrl+g=toggle_quick_terminal
 
 # macOS
 macos-titlebar-style = transparent

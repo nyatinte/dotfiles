@@ -36,7 +36,7 @@ alias glog='git log --oneline --graph --decorate'
 alias reload='source ~/.zshrc'
 
 # Claude Code便利エイリアス
-alias claude="~/.claude/local/claude"
+alias claude="~/.local/bin/claude"
 alias cc='claude'
 alias yolo="claude --dangerously-skip-permissions"
 

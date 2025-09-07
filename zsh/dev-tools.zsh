@@ -17,3 +17,6 @@ eval "$(wtp completion zsh)"
 # ni - package manager
 export NI_DEFAULT_AGENT="pnpm"
 export NI_GLOBAL_AGENT="pnpm"
+
+# jj - jujutsu dynamic completion <https://jj-vcs.github.io/jj/latest/install-and-setup/#zsh>
+source <(COMPLETE=zsh jj)

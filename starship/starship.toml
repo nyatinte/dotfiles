@@ -53,26 +53,46 @@ format = '[[($all_status$ahead_behind )](fg:#ffffff bg:#7cb1a3)]($style)'
 symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+# パフォーマンス改善: Node.jsプロジェクトでのみ表示
+detect_files = ['package.json', '.node-version', '.nvmrc']
+detect_folders = ['node_modules']
+detect_extensions = []
 
 [rust]
 symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+# パフォーマンス改善: Rustプロジェクトでのみ表示
+detect_files = ['Cargo.toml', 'Cargo.lock']
+detect_folders = []
+detect_extensions = ['rs']
 
 [python]
 symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+# パフォーマンス改善: Pythonプロジェクトでのみ表示
+detect_files = ['requirements.txt', 'pyproject.toml', 'Pipfile', '.python-version']
+detect_folders = ['.venv', 'venv']
+detect_extensions = ['py']
 
 [golang]
 symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+# パフォーマンス改善: Goプロジェクトでのみ表示
+detect_files = ['go.mod', 'go.sum', 'go.work']
+detect_folders = []
+detect_extensions = ['go']
 
 [bun]
 symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0  bg:#3b7981)]($style)'
+# パフォーマンス改善: bunプロジェクトでのみ表示
+detect_files = ['bun.lockb', 'bunfig.toml']
+detect_folders = ['.bun']
+detect_extensions = []
 
 [time]
 disabled = false

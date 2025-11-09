@@ -15,9 +15,10 @@ source "${ZSH_CONFIG_DIR}/tab-title.zsh"
 # Starship プロンプトを初期化
 eval "$(starship init zsh)"
 
-# Zshプラグイン
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Zshプラグイン（brew --prefixをキャッシュしてパフォーマンス改善）
+BREW_PREFIX="${HOMEBREW_PREFIX:-$(brew --prefix)}"
+source "${BREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "${BREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # エディター設定（Claude Code用）
 export VISUAL="code"
 

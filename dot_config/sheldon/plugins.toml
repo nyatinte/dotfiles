@@ -40,7 +40,6 @@ apply = ["defer"]
 [plugins.zpm-zsh-ls]
 github = "zpm-zsh/ls"
 
-
 # <https://github.com/MichaelAquilina/zsh-you-should-use>
 [plugins.zsh-you-should-use]
 github = "MichaelAquilina/zsh-you-should-use"

@@ -1,0 +1,14 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+#
+pre-push:
+  jobs:
+    - name: check chezmoi diff
+      run: chezmoi diff
+# pre-commit:
+# TODO: formatting checks
+# parallel: true
+# jobs:
+#   - run:

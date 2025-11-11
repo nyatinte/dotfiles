@@ -6,7 +6,15 @@
 pre-push:
   jobs:
     - name: check chezmoi diff
-      run: chezmoi diff
+      run: |
+        diff_output=$(chezmoi diff --no-pager)
+        if [ -n "$diff_output" ]; then
+          echo "$diff_output"
+          echo ""
+          echo "❌ Error: There are unapplied chezmoi changes. Please run 'chezmoi apply' first."
+          exit 1
+        fi
+
 # pre-commit:
 # TODO: formatting checks
 # parallel: true

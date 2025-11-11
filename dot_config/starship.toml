@@ -1,0 +1,86 @@
+# Starship Configuration
+# カスタムカラーパレット: https://colormagic.app/ja/palette/671c3f2e53d1e2a13ca7eed2
+# カラー変数 (CSS Variables風)
+# --color-1: #b7e3b0 (明るい緑)
+# --color-2: #a9d6b4 (薄い緑)
+# --color-3: #7cb1a3 (緑青)
+# --color-4: #3b7981 (暗い青緑)
+# --color-5: #2a494c (最も暗い青緑)
+
+format = """
+[░▒▓](#b7e3b0)\
+[🐧 ](bg:#b7e3b0 fg:#2a494c)\
+[](bg:#a9d6b4 fg:#b7e3b0)\
+$directory\
+[](fg:#a9d6b4 bg:#7cb1a3)\
+$git_branch\
+$git_status\
+[](fg:#7cb1a3 bg:#3b7981)\
+$nodejs\
+$rust\
+$python\
+$golang\
+$bun\
+[](fg:#3b7981 bg:#2a494c)\
+$time\
+[](fg:#2a494c)\
+\n$character"""
+
+command_timeout = 2000
+scan_timeout = 30
+
+[directory]
+style = "fg:#2a494c bg:#a9d6b4"  # --color-5 fg, --color-2 bg
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#7cb1a3"  # --color-3 bg
+format = '[[ $symbol $branch ](fg:#ffffff bg:#7cb1a3)]($style)'
+
+[git_status]
+style = "bg:#7cb1a3"  # --color-3 bg
+format = '[[($all_status$ahead_behind )](fg:#ffffff bg:#7cb1a3)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#3b7981"  # --color-4 bg
+format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#3b7981"  # --color-4 bg
+format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#3b7981"  # --color-4 bg
+format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#3b7981"  # --color-4 bg
+format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:#3b7981"  # --color-4 bg
+format = '[[ $symbol ($version) ](fg:#b7e3b0  bg:#3b7981)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#2a494c"  # --color-5 bg
+format = '[[  $time ](fg:#b7e3b0 bg:#2a494c)]($style)'
+
+[character]
+success_symbol = '[❯](bold #b7e3b0)'  # --color-1
+error_symbol = '[❯](bold red)'

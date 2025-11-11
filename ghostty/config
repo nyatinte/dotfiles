@@ -9,7 +9,7 @@ selection-invert-fg-bg = true
 background-opacity = 0.85
 
 # Font
-font-family = "Moralerspace Krypton NF"
+font-family = "Moralerspace Neon NF"
 font-feature = -dlig
 font-size = 17
 
@@ -27,7 +27,6 @@ adjust-cell-height = 2
 
 # Quick Terminal
 quick-terminal-position = bottom
-keybind = global:ctrl+g=toggle_quick_terminal
 
 # macOS
 macos-titlebar-style = transparent
@@ -57,6 +56,8 @@ keybind = shift+enter=text:\n
 copy-on-select = true
 clipboard-read = allow
 clipboard-write = allow
+macos-icon = chalkboard
+macos-icon-frame = plastic
 
 # Custom Shader
 # TODO: Please set your favorite background shader.

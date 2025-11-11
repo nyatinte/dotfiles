@@ -108,6 +108,7 @@ declare -a configs=(
     "zsh/zshrc:$HOME/.zshrc:Zsh"
     "starship/starship.toml:$HOME/.config/starship.toml:Starship"
     "ghostty/config:$HOME/.config/ghostty/config:Ghostty"
+    "sheldon/plugins.toml:$HOME/.config/sheldon/plugins.toml:Sheldon"
 )
 
 # エラーカウンター

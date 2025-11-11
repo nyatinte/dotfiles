@@ -1,22 +1,20 @@
 # 開発ツール設定
+# completion system
+autoload -Uz compinit
+compinit
+
+# proto - version manager activation
+eval "$(proto activate zsh --no-shim)"
+export PROTO_AUTO_INSTALL=true
+# Global npm packages PATH
+export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
 
 # Docker Desktop
 source "$HOME/.docker/init-zsh.sh" || true
 
-# fzf - fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source <(fzf --zsh)
-
-# zoxide - smarter cd command
-eval "$(zoxide init zsh)"
-
-autoload -Uz compinit
-compinit
+# wtp
 eval "$(wtp completion zsh)"
 
 # ni - package manager
 export NI_DEFAULT_AGENT="pnpm"
 export NI_GLOBAL_AGENT="pnpm"
-
-# jj - jujutsu dynamic completion <https://jj-vcs.github.io/jj/latest/install-and-setup/#zsh>
-source <(COMPLETE=zsh jj)

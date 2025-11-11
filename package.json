@@ -1,0 +1,6 @@
+{
+  "name": "dotfiles",
+  "devDependencies": {
+    "lefthook": "2.0.3"
+  }
+}

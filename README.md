@@ -6,3 +6,48 @@
 ## 📝 About
 
 This is nyatinte's private dotfiles repository, managed with [chezmoi](https://www.chezmoi.io/) for consistent configuration across multiple machines.
+
+## 🚀 Setup
+
+### Prerequisites
+
+Install the following tools:
+
+```bash
+# Install npm dependencies (Prettier, concurrently, lefthook)
+npm install
+
+# Install shfmt (shell script formatter)
+go install mvdan.cc/sh/v3/cmd/shfmt@latest
+
+# Install shellcheck (shell script linter)
+# macOS
+brew install shellcheck
+
+# Ubuntu/Debian
+apt-get install shellcheck
+
+# Other: https://github.com/koalaman/shellcheck#installing
+```
+
+### VSCode Extensions
+
+Install recommended extensions for automatic formatting:
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)
+- [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)
+
+## 🔧 Usage
+
+```bash
+# Format all files
+npm run format
+
+# Check formatting (CI)
+npm run format:check
+
+# Format specific types
+npm run format:prettier  # JSON, YAML, Markdown
+npm run format:shell     # Shell scripts
+```

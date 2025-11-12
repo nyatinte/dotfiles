@@ -11,7 +11,7 @@ export FZF_DEFAULT_OPTS='
 # Ctrl+T - File Search
 export FZF_CTRL_T_COMMAND="rg --files --hidden --follow --glob '!.git/*' --glob '!node_modules/*'"
 export FZF_CTRL_T_OPTS="
-  --preview 'bat --color=always --style=numbers --line-range=:500 {}'
+  --preview '[[ -d {} ]] && ls -la {} || (bat --color=always --style=numbers --line-range=:500 {} || cat {})'
   --preview-window=right:60%:wrap"
 
 # Ctrl+R - History Search

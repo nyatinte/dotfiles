@@ -20,10 +20,10 @@ pre-commit:
   commands:
     prettier-check:
       glob: "*.{json,yml,yaml,md}"
-      run: npx prettier --check {staged_files}
+      run: npm run lint:prettier -- {staged_files}
     shfmt-check:
       glob: "*.{sh,zsh,bash}"
-      run: shfmt -d -i 2 {staged_files}
+      run: npm run lint:shfmt -- {staged_files}
     shellcheck:
       glob: "*.{sh,zsh,bash}"
-      run: shellcheck {staged_files} || echo "⚠️  shellcheck not found, skipping lint check"
+      run: npm run lint:shellcheck -- {staged_files} || echo "⚠️  shellcheck not found, skipping lint check"

@@ -7,7 +7,10 @@
     "format:shell": "shfmt -w -i 2 home/**/*.zsh",
     "check:prettier": "prettier --check '**/*.{json,yml,yaml,md}'",
     "check:shfmt": "shfmt -d -i 2 home/**/*.zsh",
-    "check:shellcheck": "shellcheck home/**/*.zsh || exit 0"
+    "check:shellcheck": "shellcheck home/**/*.zsh || exit 0",
+    "lint:prettier": "prettier --check",
+    "lint:shfmt": "shfmt -d -i 2",
+    "lint:shellcheck": "shellcheck"
   },
   "devDependencies": {
     "concurrently": "^9.1.1",

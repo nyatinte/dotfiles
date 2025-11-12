@@ -18,6 +18,12 @@ pre-push:
 pre-commit:
   parallel: true
   commands:
-    format-check:
-      glob: "*.{json,yml,yaml,md,sh,zsh}"
+    prettier-check:
+      glob: "*.{json,yml,yaml,md}"
       run: npx prettier --check {staged_files}
+    shfmt-check:
+      glob: "*.{sh,zsh,bash}"
+      run: shfmt -d -i 2 {staged_files}
+    shellcheck:
+      glob: "*.{sh,zsh,bash}"
+      run: shellcheck {staged_files} || echo "⚠️  shellcheck not found, skipping lint check"

@@ -1,6 +1,12 @@
 {
   "name": "dotfiles",
+  "scripts": {
+    "format": "prettier --write '**/*.{json,yml,yaml,md,sh,zsh}'",
+    "format:check": "prettier --check '**/*.{json,yml,yaml,md,sh,zsh}'"
+  },
   "devDependencies": {
-    "lefthook": "2.0.3"
+    "lefthook": "2.0.3",
+    "prettier": "^3.4.2",
+    "prettier-plugin-sh": "^0.14.0"
   }
 }

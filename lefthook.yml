@@ -15,8 +15,9 @@ pre-push:
           exit 1
         fi
 
-# pre-commit:
-# TODO: formatting checks
-# parallel: true
-# jobs:
-#   - run:
+pre-commit:
+  parallel: true
+  commands:
+    format-check:
+      glob: "*.{json,yml,yaml,md,sh,zsh}"
+      run: npx prettier --check {staged_files}

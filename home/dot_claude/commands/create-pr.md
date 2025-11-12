@@ -68,7 +68,7 @@ argument-hint: "[オプション: PR作成時の追加指示]"
 - ベースブランチをもとにPRを作成:
 
   ```bash
-  gh pr create --base <ベースブランチ> --title "$(head -n1 PR.md)" --body "$(tail -n+2 PR.md)"
+  gh pr create --base "$(head -n1 PR.md)" --body "$(tail -n+2 PR.md)" < ベースブランチ > --title
   ```
 
 - PR URLを表示

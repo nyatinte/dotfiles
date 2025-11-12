@@ -14,6 +14,12 @@ export FZF_CTRL_T_OPTS="
   --preview 'bat --color=always --style=numbers --line-range=:500 {}'
   --preview-window=right:60%:wrap"
 
+# Alt+C - Directory Search
+export FZF_ALT_C_COMMAND="fd --type d --hidden --follow --exclude .git --exclude node_modules"
+export FZF_ALT_C_OPTS="
+  --preview 'ls -la --color=always {} | head -200'
+  --preview-window=right:60%:wrap"
+
 # Ctrl+R - History Search
 function fzf-select-history() {
     BUFFER=$(history -n -r 1 | fzf --query "$LBUFFER")

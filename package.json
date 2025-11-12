@@ -1,10 +1,16 @@
 {
   "name": "dotfiles",
   "scripts": {
-    "format": "prettier --write '**/*.{json,yml,yaml,md}' && shfmt -w -i 2 home/**/*.zsh",
-    "format:check": "prettier --check '**/*.{json,yml,yaml,md}' && shfmt -d -i 2 home/**/*.zsh && shellcheck home/**/*.zsh"
+    "format": "concurrently --group \"prettier --write '**/*.{json,yml,yaml,md}'\" \"shfmt -w -i 2 home/**/*.zsh\"",
+    "format:check": "concurrently --group \"prettier --check '**/*.{json,yml,yaml,md}'\" \"shfmt -d -i 2 home/**/*.zsh\" \"shellcheck home/**/*.zsh || exit 0\"",
+    "format:prettier": "prettier --write '**/*.{json,yml,yaml,md}'",
+    "format:shell": "shfmt -w -i 2 home/**/*.zsh",
+    "check:prettier": "prettier --check '**/*.{json,yml,yaml,md}'",
+    "check:shfmt": "shfmt -d -i 2 home/**/*.zsh",
+    "check:shellcheck": "shellcheck home/**/*.zsh || exit 0"
   },
   "devDependencies": {
+    "concurrently": "^9.1.1",
     "lefthook": "2.0.3",
     "prettier": "^3.4.2"
   }

@@ -22,3 +22,26 @@ function fzf-select-history() {
 }
 zle -N fzf-select-history
 bindkey '^r' fzf-select-history
+
+# Ctrl+G - Keyword Search (ripgrep + fzf)
+function fzf-keyword-search() {
+    local selected
+    selected=$(
+        rg --line-number --no-heading --color=always --smart-case '' 2>/dev/null |
+        fzf --ansi \
+            --delimiter ':' \
+            --preview 'bat --color=always --style=numbers --highlight-line {2} {1}' \
+            --preview-window 'right:60%:wrap:+{2}-5' \
+            --bind 'enter:become(echo {1}:{2})'
+    )
+
+    if [[ -n "$selected" ]]; then
+        local file="${selected%%:*}"
+        local line="${selected#*:}"
+        # エディタで開く（環境変数 EDITOR を使用、デフォルトは vim）
+        ${EDITOR:-vim} "+${line}" "$file"
+    fi
+    zle reset-prompt
+}
+zle -N fzf-keyword-search
+bindkey '^g' fzf-keyword-search

@@ -37,7 +37,7 @@ function fzf-keyword-search() {
         fzf --ansi \
             --delimiter ':' \
             --preview 'bat --color=always --style=numbers --highlight-line {2} {1}' \
-            --preview-window 'right:60%:wrap:+{2}-5' \
+            --preview-window 'right:60%:+{2}+3/3:wrap' \
             --bind 'enter:become(echo {1}:{2})'
     )
 

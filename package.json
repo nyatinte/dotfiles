@@ -1,5 +1,8 @@
 {
   "name": "dotfiles",
+  "engines": {
+    "node": "24.11.1"
+  },
   "devDependencies": {
     "lefthook": "2.0.3"
   }

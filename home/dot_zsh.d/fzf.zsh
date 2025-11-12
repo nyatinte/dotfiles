@@ -9,14 +9,21 @@ export FZF_DEFAULT_OPTS='
   --color=marker:#a3be8c,spinner:#b48ead,header:#88c0d0'
 
 # Ctrl+T - File Search
-export FZF_CTRL_T_COMMAND="rg --files --hidden --follow --glob '!.git/*' --glob '!node_modules/*'"
+export FZF_CTRL_T_COMMAND="fd --type f --exclude .git --exclude node_modules"
 export FZF_CTRL_T_OPTS="
-  --preview 'bat --color=always --style=numbers --line-range=:500 {}'
+  --select-1 --exit-0
+  --bind 'ctrl-l:execute(tmux splitw -h -- \${EDITOR:-vim} {})'
+  --bind '>:reload(fd --type f --hidden --exclude .git --exclude node_modules)'
+  --bind '<:reload(\$FZF_CTRL_T_COMMAND)'
+  --preview 'bat --color=always --style=numbers --line-range=:200 {}'
   --preview-window=right:60%:wrap"
 
 # Alt+C - Directory Search
-export FZF_ALT_C_COMMAND="fd --type d --hidden --follow --exclude .git --exclude node_modules"
+export FZF_ALT_C_COMMAND="fd --type d --exclude .git --exclude node_modules"
 export FZF_ALT_C_OPTS="
+  --select-1 --exit-0
+  --bind '>:reload(fd --type d --hidden --exclude .git --exclude node_modules)'
+  --bind '<:reload(\$FZF_ALT_C_COMMAND)'
   --preview 'ls -la --color=always {} | head -200'
   --preview-window=right:60%:wrap"
 
@@ -29,13 +36,17 @@ function fzf-select-history() {
 zle -N fzf-select-history
 bindkey '^r' fzf-select-history
 
-# Ctrl+G - Keyword Search (ripgrep + fzf)
+# Ctrl+G - Keyword Search (ripgrep + fzf with dynamic reload)
 function fzf-keyword-search() {
+    local rg_cmd="rg --smart-case --line-number --no-heading --color=always --trim"
     local selected
+
     selected=$(
-        rg --line-number --no-heading --color=always --smart-case '' 2>/dev/null |
-        fzf --ansi \
+        FZF_DEFAULT_COMMAND=":" \
+        fzf --ansi --phony \
             --delimiter ':' \
+            --bind "change:reload:$rg_cmd {q} || true" \
+            --bind 'ctrl-l:execute(tmux splitw -h -- ${EDITOR:-vim} +{2} {1})' \
             --preview 'bat --color=always --style=numbers --highlight-line {2} {1}' \
             --preview-window 'right:60%:+{2}+3/3:wrap' \
             --bind 'enter:become(echo {1}:{2})'
@@ -44,7 +55,7 @@ function fzf-keyword-search() {
     if [[ -n "$selected" ]]; then
         local file="${selected%%:*}"
         local line="${selected#*:}"
-        # エディタで開く（環境変数 EDITOR を使用、デフォルトは vim）
+        line="${line%%:*}"  # Remove any trailing content after line number
         ${EDITOR:-vim} "+${line}" "$file"
     fi
     zle reset-prompt

@@ -29,7 +29,6 @@ apply = ["defer"]
 # <https://github.com/zdharma-continuum/fast-syntax-highlighting>
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
-apply = ["defer"]
 
 # <https://github.com/zsh-users/zsh-completions>
 [plugins.zsh-completions]

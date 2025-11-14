@@ -10,22 +10,50 @@ export FZF_DEFAULT_OPTS='
 
 # Ctrl+T - File Search
 export FZF_CTRL_T_COMMAND="fd --type f --exclude .git --exclude node_modules"
-export FZF_CTRL_T_OPTS="
-  --select-1 --exit-0
-  --bind 'ctrl-l:execute(tmux splitw -h -- \${EDITOR:-vim} {})'
-  --bind '>:reload(fd --type f --hidden --exclude .git --exclude node_modules)'
-  --bind '<:reload(\$FZF_CTRL_T_COMMAND)'
-  --preview 'bat --color=always --style=numbers --line-range=:200 {}'
-  --preview-window=right:60%:wrap"
+
+function fzf-file-widget() {
+    local selected
+    selected=$(
+        eval "$FZF_CTRL_T_COMMAND" |
+        fzf --ansi \
+            --select-1 --exit-0 \
+            --bind 'ctrl-l:execute(tmux splitw -h -- ${EDITOR:-vim} {})' \
+            --bind ">:reload(fd --type f --hidden --exclude .git --exclude node_modules)" \
+            --bind "<:reload($FZF_CTRL_T_COMMAND)" \
+            --preview 'bat --color=always --style=numbers --line-range=:200 {}' \
+            --preview-window=right:60%:wrap
+    )
+
+    if [[ -n "$selected" ]]; then
+        LBUFFER="${LBUFFER}${selected}"
+    fi
+    zle reset-prompt
+}
+zle -N fzf-file-widget
+bindkey '^T' fzf-file-widget
 
 # Alt+C - Directory Search
 export FZF_ALT_C_COMMAND="fd --type d --exclude .git --exclude node_modules"
-export FZF_ALT_C_OPTS="
-  --select-1 --exit-0
-  --bind '>:reload(fd --type d --hidden --exclude .git --exclude node_modules)'
-  --bind '<:reload(\$FZF_ALT_C_COMMAND)'
-  --preview 'ls -la --color=always {} | head -200'
-  --preview-window=right:60%:wrap"
+
+function fzf-cd-widget() {
+    local selected
+    selected=$(
+        eval "$FZF_ALT_C_COMMAND" |
+        fzf --ansi \
+            --select-1 --exit-0 \
+            --bind '>:reload(fd --type d --hidden --exclude .git --exclude node_modules)' \
+            --bind "<:reload($FZF_ALT_C_COMMAND)" \
+            --preview 'ls -la --color=always {} | head -200' \
+            --preview-window=right:60%:wrap
+    )
+
+    if [[ -n "$selected" ]]; then
+        cd "$selected"
+    fi
+    zle reset-prompt
+}
+zle -N fzf-cd-widget
+bindkey '\ec' fzf-cd-widget  # Alt+C
 
 # Ctrl+R - History Search
 function fzf-select-history() {

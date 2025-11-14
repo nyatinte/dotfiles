@@ -42,7 +42,7 @@ function fzf-cd-widget() {
             --select-1 --exit-0 \
             --bind '>:reload(fd --type d --hidden --exclude .git --exclude node_modules)' \
             --bind "<:reload($FZF_ALT_C_COMMAND)" \
-            --preview 'ls -la --color=always {} | head -200' \
+            --preview 'eza --tree --level=3 --color=always {} | head -200' \
             --preview-window=right:60%:wrap
     )
 

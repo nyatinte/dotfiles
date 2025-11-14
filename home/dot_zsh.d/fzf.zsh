@@ -9,7 +9,7 @@ export FZF_DEFAULT_OPTS='
   --color=marker:#a3be8c,spinner:#b48ead,header:#88c0d0'
 
 # Ctrl+T - File Search
-export FZF_CTRL_T_COMMAND="fd --type f --exclude .git --exclude node_modules"
+export FZF_CTRL_T_COMMAND="rg --files --hidden --follow --glob '!.git/*' --glob '!node_modules/*'"
 
 function fzf-file-widget() {
     local selected
@@ -17,10 +17,9 @@ function fzf-file-widget() {
         eval "$FZF_CTRL_T_COMMAND" |
         fzf --ansi \
             --select-1 --exit-0 \
-            --bind 'ctrl-l:execute(tmux splitw -h -- ${EDITOR:-vim} {})' \
-            --bind ">:reload(fd --type f --hidden --exclude .git --exclude node_modules)" \
+            --bind ">:reload(rg --files --hidden --follow --glob '!.git/*' --glob '!node_modules/*')" \
             --bind "<:reload($FZF_CTRL_T_COMMAND)" \
-            --preview 'bat --color=always --style=numbers --line-range=:200 {}' \
+            --preview 'bat --color=always --style=numbers --line-range=:500 {}' \
             --preview-window=right:60%:wrap
     )
 
@@ -74,7 +73,6 @@ function fzf-keyword-search() {
         fzf --ansi --phony \
             --delimiter ':' \
             --bind "change:reload:$rg_cmd {q} || true" \
-            --bind 'ctrl-l:execute(tmux splitw -h -- ${EDITOR:-vim} +{2} {1})' \
             --preview 'bat --color=always --style=numbers --highlight-line {2} {1}' \
             --preview-window 'right:60%:+{2}+3/3:wrap' \
             --bind 'enter:become(echo {1}:{2})'

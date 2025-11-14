@@ -7,6 +7,7 @@ source "${ZSH_CONFIG_DIR}/path.zsh"
 source "${ZSH_CONFIG_DIR}/dev-tools.zsh"
 source "${ZSH_CONFIG_DIR}/aliases.zsh"
 source "${ZSH_CONFIG_DIR}/fzf.zsh"
+[ -f "${ZSH_CONFIG_DIR}/.local.zsh" ] && source "${ZSH_CONFIG_DIR}/.local.zsh"
 
 # 補完システムの初期化
 autoload -Uz compinit

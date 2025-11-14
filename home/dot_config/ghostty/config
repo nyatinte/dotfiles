@@ -25,9 +25,6 @@ alpha-blending = linear
 adjust-cell-width = -1
 adjust-cell-height = 2
 
-# Quick Terminal
-quick-terminal-position = bottom
-
 # macOS
 macos-titlebar-style = transparent
 macos-window-shadow = false

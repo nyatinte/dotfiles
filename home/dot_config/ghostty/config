@@ -54,11 +54,15 @@ cursor-opacity = 0.8
 mouse-hide-while-typing = true
 resize-overlay = never
 keybind = shift+enter=text:\n
+keybind = command+k=text:\x0c
 copy-on-select = true
 clipboard-read = allow
 clipboard-write = allow
+
+# macOS Specific Settings
 macos-icon = chalkboard
 macos-icon-frame = plastic
+macos-option-as-alt = left
 
 # Custom Shader
 # TODO: Please set your favorite background shader.

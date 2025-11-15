@@ -6,7 +6,11 @@ selection-background = #404040
 selection-invert-fg-bg = true
 
 # Background opacity
+background-image = "./assets/nyatinte.png"
+background-image-opacity = 0.7
 background-opacity = 0.85
+background-image-fit = none
+background-image-position = bottom-right
 
 # Font
 font-family = "Moralerspace Neon NF"

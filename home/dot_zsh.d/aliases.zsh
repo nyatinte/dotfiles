@@ -16,6 +16,7 @@ alias gco='git checkout'
 alias gcb='git checkout -b'
 alias glog='git log --oneline --graph --decorate'
 alias gprw="gh pr view --web"
+alias grw="gh repo view --web"
 
 # システム
 alias reload='source ~/.zshrc'

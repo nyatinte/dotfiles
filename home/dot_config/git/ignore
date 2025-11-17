@@ -1,3 +1,4 @@
 **/.claude/settings.local.json
 **/CLAUDE.local.md
 .wtp.yml
+.worktrees/

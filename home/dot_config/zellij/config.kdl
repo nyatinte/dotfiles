@@ -1,1 +1,9 @@
 theme "solarized-dark"
+
+keybinds {
+    normal {
+        bind "Alt b" {
+            Run "bash" "-c" "$HOME/scripts/zellij-new-branch-tab.sh";
+        }
+    }
+}

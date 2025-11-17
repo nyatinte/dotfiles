@@ -2,7 +2,6 @@ theme "solarized-dark"
 
 keybinds {
     normal {
-        // Alt+b でブランチ開発環境を起動
         bind "Alt b" {
             Run "bash" "-c" "$HOME/scripts/zellij-new-branch-tab.sh";
         }

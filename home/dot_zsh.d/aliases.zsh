@@ -26,9 +26,14 @@ gwn() {
         echo "Usage: gwn <branch-name>"
         return 1
     fi
-    local default_branch=$(gh api repos/:owner/:repo --jq .default_branch 2>/dev/null || echo "main")
-    # WHY g'w'r ? -> 'gtr' command conflicts. see <https://github.com/coderabbitai/git-worktree-runner/issues/11>
-    gwr new "$branch_name" --from "origin/$default_branch" && cd "$(gwr go "$branch_name")"
+    local default_branch
+    default_branch=$(git remote show origin 2>/dev/null | awk '/HEAD branch/ {print $NF}')
+    if [ -z "$default_branch" ] && command -v gh >/dev/null 2>&1; then
+        if default_branch=$(gh repo view --json defaultBranchRef --jq .defaultBranchRef.name 2>/dev/null); then
+            :
+        fi
+    fi
+    git gtr new "$branch_name" --from "origin/$default_branch" && cd "$(git gtr go "$branch_name")"
 }
 
 # システム

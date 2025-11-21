@@ -1,5 +1,5 @@
 ---
-allowed-tools: Bash(git push:*), Bash(git log:*), Bash(git branch --show-current), Bash(git status:*), Read(PR.md), Bash(gh pr list:*), Bash(gh repo view:*)
+allowed-tools: Bash(git push:*), Bash(git log:*), Bash(git branch --show-current), Bash(git status:*), Read(PR.md), Bash(gh pr list:*), Bash(gh repo view:*), Bash(test -f PR.md), Bash(gh pr create:*)
 denied-tools: Bash(git commit:*), Bash(git reset:*), Bash(git rebase:*), Edit(*), Write(*), mcp__github__create_pull_request, mcp__github__merge_pull_request
 description: Push current branch and create a pull request using PR.md
 argument-hint: "[オプション: PR作成時の追加指示]"
@@ -57,27 +57,22 @@ argument-hint: "[オプション: PR作成時の追加指示]"
 
 - push成功を確認
 
-### 5. **PR作成の確認**
-
-- PR.mdの内容をユーザーに表示
-- 確認メッセージ: "以下の内容でPRを作成します。よろしいですか？"
-- ユーザーの明示的な承認を待つ
-
-### 6. **PR作成**（承認後）
+### 5. **PR作成**（承認後）
 
 - ベースブランチをもとにPRを作成:
 
   ```bash
-  gh pr create --base <ベースブランチ> --title "$(head -n1 PR.md)" --body "$(tail -n+2 PR.md)"
+  gh pr create --base <ベースブランチ> --title "$(head -n1 PR.md)" --body "$(tail -n+2 PR.md)" --draft
   ```
 
 - PR URLを表示
 - 成功メッセージを表示
+- ドラフトとして作成したので、GitHub上で再度確認・公開を促す
 
 ## 重要事項
 
 - **ユーザー承認必須**: ユーザーの明示的な承認なしにPRを作成しない
-- **PR.md必須**: PR.mdが存在しない場合は、`/draft-pr`を実行するよう案内
+- **PR.md必須**: PR.mdが存在しない場合は、`/draft-pr`を実行する。
 - **PR更新機能なし**: 既存PRの更新は行わない（新規作成のみ）
 - **ユーザーコミュニケーション**: 日本語で応答
 

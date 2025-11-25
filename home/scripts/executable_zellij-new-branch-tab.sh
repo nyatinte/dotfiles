@@ -4,7 +4,7 @@ branch_name=$(git branch --show-current 2>/dev/null || echo "worktree")
 current_dir=$(pwd)
 
 zellij action new-tab --name "$branch_name"
-zellij action write-chars "claude code"
+zellij action write-chars "cd \"$current_dir\" && cc"
 zellij action write 10
 zellij action new-pane --direction right --cwd "$current_dir"
 zellij action write-chars "cd \"$current_dir\""

@@ -1,0 +1,110 @@
+# rer: https://github.com/coderabbitai/git-worktree-runner/blob/main/completions/_git-gtr
+#compdef _git-gtr git-gtr gtr
+
+# Register gtr as a git subcommand for completion
+zstyle ':completion:*:*:git:*' user-commands gtr:'Git worktree management'
+
+# Zsh completion for git gtr
+
+_git-gtr() {
+  # Normalize invocation so we always see: [git, gtr, <command>, ...]
+  # Handles: `git gtr`, `gtr`, and `git-gtr` invocations
+  if [[ $words[1] != git ]]; then
+    # Handle both `gtr ...` and `git-gtr ...`
+    words=(git gtr "${words[@]:1}")
+    (( CURRENT += 1 ))
+  fi
+
+  local -a commands
+  commands=(
+    'new:Create a new worktree'
+    'go:Navigate to worktree'
+    'run:Execute command in worktree'
+    'rm:Remove worktree(s)'
+    'editor:Open worktree in editor'
+    'ai:Start AI coding tool'
+    'ls:List all worktrees'
+    'list:List all worktrees'
+    'clean:Remove stale worktrees'
+    'doctor:Health check'
+    'adapter:List available adapters'
+    'config:Manage configuration'
+    'version:Show version'
+    'help:Show help'
+  )
+
+  local -a branches all_options
+  # Get branch names
+  branches=(${(f)"$(git branch --format='%(refname:short)' 2>/dev/null)"})
+  # Add special ID '1' for main repo
+  all_options=("1" "${branches[@]}")
+
+  # Early handler for `new` command - handle all positions
+  if (( CURRENT >= 4 )) && [[ $words[3] == new ]]; then
+    _arguments \
+      '1:branch name:' \
+      '--from[Base ref]:ref:' \
+      '--from-current[Create from current branch]' \
+      '--track[Track mode]:mode:(auto remote local none)' \
+      '--no-copy[Skip file copying]' \
+      '--no-fetch[Skip git fetch]' \
+      '--force[Allow same branch in multiple worktrees]' \
+      '--name[Custom folder name suffix]:name:' \
+      '--yes[Non-interactive mode]'
+    return
+  fi
+
+  # Early handler for `list/ls` command - add --porcelain
+  if (( CURRENT >= 4 )) && [[ $words[3] == (list|ls) ]]; then
+    _arguments '--porcelain[Machine-readable output]'
+    return
+  fi
+
+  # Complete the gtr subcommand (new, go, editor, etc.)
+  if (( CURRENT == 3 )); then
+    _describe 'commands' commands
+  # Complete arguments to the subcommand
+  elif (( CURRENT == 4 )); then
+    case "$words[3]" in
+      go|run|rm)
+        _describe 'branch names' all_options
+        ;;
+      editor)
+        _describe 'branch names' all_options
+        ;;
+      ai)
+        _describe 'branch names' all_options
+        ;;
+      config)
+        _values 'config action' get set add unset
+        ;;
+    esac
+  # Complete subsequent arguments
+  elif (( CURRENT >= 5 )); then
+    case "$words[3]" in
+      editor)
+        _arguments '--editor[Editor to use]:editor:(cursor vscode zed idea pycharm webstorm vim nvim emacs sublime nano atom none)'
+        ;;
+      ai)
+        _arguments '--ai[AI tool to use]:tool:(aider claude codex cursor continue opencode none)'
+        ;;
+      rm)
+        _arguments \
+          '--delete-branch[Delete branch]' \
+          '--force[Force removal even if dirty]' \
+          '--yes[Non-interactive mode]'
+        ;;
+      config)
+        case "$words[4]" in
+          get|set|add|unset)
+            _arguments \
+              '--global[Use global git config]' \
+              '*:config key:(gtr.worktrees.dir gtr.worktrees.prefix gtr.defaultBranch gtr.editor.default gtr.ai.default gtr.copy.include gtr.copy.exclude gtr.copy.includeDirs gtr.copy.excludeDirs gtr.hook.postCreate gtr.hook.postRemove)'
+            ;;
+        esac
+        ;;
+    esac
+  fi
+}
+
+_git-gtr "$@"

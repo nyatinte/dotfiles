@@ -10,8 +10,10 @@ source "${ZSH_CONFIG_DIR}/fzf.zsh"
 [ -f "${ZSH_CONFIG_DIR}/.local.zsh" ] && source "${ZSH_CONFIG_DIR}/.local.zsh"
 
 # 補完システムの初期化
-autoload -Uz compinit
-compinit
+fpath+=(${ZSH_CONFIG_DIR}/completions)
+autoload -Uz compinit && compinit
+
+source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 
 # Starship
 eval "$(starship init zsh)"

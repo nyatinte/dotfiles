@@ -23,8 +23,9 @@
 	br = branch
 	ci = commit
 	df = diff
-	lg = log --oneline --decorate --all --graph
+	lg = log --pretty=format:'%C(yellow)%h%C(reset) %C(blue)%an%C(reset) %s %C(green)(%cr)%C(reset)%C(red)%d%C(reset)' --all
 	cp = cherry-pick
+	sw = switch
 
 [submodule]
 	recurse = true

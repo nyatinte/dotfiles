@@ -11,12 +11,11 @@ source "${ZSH_CONFIG_DIR}/fzf.zsh"
 
 # 補完システムの初期化
 fpath+=(${ZSH_CONFIG_DIR}/completions)
-autoload -Uz compinit && compinit
 
 source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 
-# Starship
-eval "$(starship init zsh)"
-
 # Sheldon
 eval "$(sheldon source)"
+
+# Starship
+eval "$(starship init zsh)"

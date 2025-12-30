@@ -38,6 +38,7 @@ apply = ["defer"]
 # <https://github.com/zpm-zsh/ls>
 [plugins.zpm-zsh-ls]
 github = "zpm-zsh/ls"
+apply = ["defer"]
 
 # <https://github.com/MichaelAquilina/zsh-you-should-use>
 [plugins.zsh-you-should-use]
@@ -47,11 +48,13 @@ apply = ["defer"]
 # <https://github.com/alexiszamanidis/zsh-git-fzf>
 [plugins.zsh-git-fzf]
 github = "alexiszamanidis/zsh-git-fzf"
+apply = ["defer"]
 
 # <https://github.com/ajeetdsouza/zoxide>
 [plugins.zoxide]
 github = "ajeetdsouza/zoxide"
 use = ["zoxide.plugin.zsh"]
+apply = ["defer"]
 
 [plugins.compinit]
 inline = '''

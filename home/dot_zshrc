@@ -11,12 +11,15 @@ source "${ZSH_CONFIG_DIR}/fzf.zsh"
 
 # 補完システムの初期化
 fpath+=(${ZSH_CONFIG_DIR}/completions)
-autoload -Uz compinit && compinit
 
 source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 
+# Sheldon (キャッシュファイルを直接読み込み)
+cache_file="${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.zsh"
+if [[ ! -r "$cache_file" || "${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml" -nt "$cache_file" ]]; then
+  sheldon lock --update
+fi
+source "$cache_file"
+
 # Starship
 eval "$(starship init zsh)"
-
-# Sheldon
-eval "$(sheldon source)"

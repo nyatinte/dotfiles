@@ -14,13 +14,8 @@ fpath+=(${ZSH_CONFIG_DIR}/completions)
 
 source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 
-# Sheldon (キャッシュファイルを直接読み込み)
-sheldon_cache="${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/init.zsh"
-sheldon_toml="${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml"
-if [[ ! -r "$sheldon_cache" || "$sheldon_toml" -nt "$sheldon_cache" ]]; then
-  sheldon source > "$sheldon_cache"
-fi
-source "$sheldon_cache"
+# Sheldon
+eval "$(sheldon source)"
 
 # Starship
 eval "$(starship init zsh)"

@@ -58,6 +58,17 @@
         "id": "8892b168-7f89-48c8-9e46-dded276d7586",
         "type": "current-working-dir",
         "rawValue": false
+      },
+      {
+        "id": "ed7ca308-5866-43a1-b7e2-966250857e3b",
+        "type": "separator"
+      },
+      {
+        "id": "eb0a7efd-6ede-4cb6-87c9-cc63ee6423d7",
+        "type": "custom-command",
+        "color": "brightBlue",
+        "commandPath": "~/.config/ccstatusline/repo-url.sh",
+        "timeout": 3000
       }
     ],
     [
@@ -84,7 +95,7 @@
       }
     ]
   ],
-  "flexMode": "full-minus-40",
+  "flexMode": "full",
   "compactThreshold": 60,
   "colorLevel": 2,
   "inheritSeparatorColors": false,

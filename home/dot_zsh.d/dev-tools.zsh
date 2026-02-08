@@ -15,4 +15,5 @@ export NI_DEFAULT_AGENT="pnpm"
 export NI_GLOBAL_AGENT="pnpm"
 
 # Code editor
-export VISUAL="code"
+export VISUAL="zed"
+export EDITOR="hx"

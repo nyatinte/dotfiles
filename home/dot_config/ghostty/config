@@ -58,6 +58,7 @@ keybind = command+k=text:\x0c
 copy-on-select = true
 clipboard-read = allow
 clipboard-write = allow
+desktop-notifications = true
 
 # macOS Specific Settings
 macos-icon = chalkboard

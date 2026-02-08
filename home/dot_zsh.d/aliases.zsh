@@ -43,6 +43,9 @@ alias reload='source ~/.zshrc'
 alias cc='claude'
 alias cc-yolo='claude --dangerously-skip-permissions'
 
+# デフォルトエディタで開く
+alias c.='${VISUAL} .'
+
 # rmの代替 - ゴミ箱に移動
 alias rm='safe-rm'
 

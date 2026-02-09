@@ -95,7 +95,7 @@
       }
     ]
   ],
-  "flexMode": "full",
+  "flexMode": "full-minus-40",
   "compactThreshold": 60,
   "colorLevel": 2,
   "inheritSeparatorColors": false,

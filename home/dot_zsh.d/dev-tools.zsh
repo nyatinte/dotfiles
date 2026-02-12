@@ -17,3 +17,6 @@ export NI_GLOBAL_AGENT="pnpm"
 # Code editor
 export VISUAL="zed"
 export EDITOR="hx"
+
+# Lazygit
+export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"

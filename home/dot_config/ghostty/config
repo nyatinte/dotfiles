@@ -11,6 +11,7 @@ background-image-opacity = 0.7
 background-opacity = 0.85
 background-image-fit = none
 background-image-position = bottom-right
+unfocused-split-opacity = 0.85
 
 # Font
 font-family = "Moralerspace Neon NF"

@@ -54,3 +54,6 @@ alias lg='lazygit'
 
 # zellij
 alias zj='zellij'
+
+# chezmoi
+alias chz='chezmoi'

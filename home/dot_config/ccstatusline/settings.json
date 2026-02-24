@@ -35,6 +35,14 @@
         "color": "magenta"
       },
       {
+        "id": "3113f013-7917-4ec0-8517-0009cba1e0fc",
+        "type": "separator"
+      },
+      {
+        "id": "8c257a9e-5ffa-4842-94b1-30e0b4a14393",
+        "type": "git-worktree"
+      },
+      {
         "id": "6",
         "type": "separator"
       },

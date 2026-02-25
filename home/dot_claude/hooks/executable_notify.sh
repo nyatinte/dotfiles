@@ -55,14 +55,17 @@ NOTIFICATION_TYPE="$1"
 case "$NOTIFICATION_TYPE" in
   "permission_prompt")
     cmux notify --title 'Claude Code 🔔' --subtitle "$PROJECT_NAME" --body '承認をお待ちしています'
+    open -g 'raycast://extensions/raycast/raycast/confetti?emojis=🔔🔔🔔'
     afplay /System/Library/Sounds/Glass.aiff
     ;;
   "idle_prompt")
     cmux notify --title 'Claude Code 💬' --subtitle "$PROJECT_NAME" --body '入力待ちです'
+    open -g 'raycast://extensions/raycast/raycast/confetti?emojis=💬💬💬'
     afplay /System/Library/Sounds/Ping.aiff
     ;;
   "post_tool_use")
     cmux notify --title 'Claude Code 🤖' --subtitle "$PROJECT_NAME" --body 'エージェントが完了しました'
+    open -g 'raycast://extensions/raycast/raycast/confetti?emojis=🤖🤖🤖'
     afplay /System/Library/Sounds/Purr.aiff
     ;;
   "complete")

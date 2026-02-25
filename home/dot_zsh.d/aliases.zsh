@@ -37,6 +37,18 @@ gwn() {
     git gtr new "$branch_name" --from "origin/$default_branch" && cd "$(git gtr go "$branch_name")"
 }
 
+# 長時間コマンドの完了通知
+notify-after() {
+  "$@"
+  local exit_code=$?
+  if [ $exit_code -eq 0 ]; then
+    cmux notify --title "✓ Command Complete" --body "$1"
+  else
+    cmux notify --title "✗ Command Failed" --body "$1 (exit $exit_code)"
+  fi
+  return $exit_code
+}
+
 # システム
 alias reload='source ~/.zshrc'
 

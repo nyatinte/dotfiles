@@ -54,23 +54,25 @@ NOTIFICATION_TYPE="$1"
 
 case "$NOTIFICATION_TYPE" in
   "permission_prompt")
+    EMOJI='🔔'; SOUND='Glass'
     cmux notify --title 'Claude Code 🔔' --subtitle "$PROJECT_NAME" --body '承認をお待ちしています'
-    open -g 'raycast://extensions/raycast/raycast/confetti?emojis=🔔🔔🔔'
-    afplay /System/Library/Sounds/Glass.aiff
     ;;
   "idle_prompt")
+    EMOJI='💬'; SOUND='Ping'
     cmux notify --title 'Claude Code 💬' --subtitle "$PROJECT_NAME" --body '入力待ちです'
-    open -g 'raycast://extensions/raycast/raycast/confetti?emojis=💬💬💬'
-    afplay /System/Library/Sounds/Ping.aiff
     ;;
   "post_tool_use")
+    EMOJI='🤖'; SOUND='Purr'
     cmux notify --title 'Claude Code 🤖' --subtitle "$PROJECT_NAME" --body 'エージェントが完了しました'
-    open -g 'raycast://extensions/raycast/raycast/confetti?emojis=🤖🤖🤖'
-    afplay /System/Library/Sounds/Purr.aiff
     ;;
   "complete")
+    EMOJI='🎉'; SOUND='Hero'
     cmux notify --title 'Claude Code ✅' --subtitle "$PROJECT_NAME" --body 'タスクが完了しました'
-    open -g 'raycast://extensions/raycast/raycast/confetti?emojis=🎉🎉🎉'
-    afplay /System/Library/Sounds/Hero.aiff
+    ;;
+  *)
+    exit 0
     ;;
 esac
+
+open -g "raycast://extensions/raycast/raycast/confetti?emojis=${EMOJI}${EMOJI}${EMOJI}"
+afplay "/System/Library/Sounds/${SOUND}.aiff"

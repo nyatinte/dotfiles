@@ -52,8 +52,8 @@ notify-after() {
 # システム
 alias reload='source ~/.zshrc'
 
-alias cc='claude'
-alias cc-yolo='claude --dangerously-skip-permissions'
+alias cla='claude'
+alias cla-yolo='claude --dangerously-skip-permissions'
 
 # デフォルトエディタで開く
 alias c.='${VISUAL} .'

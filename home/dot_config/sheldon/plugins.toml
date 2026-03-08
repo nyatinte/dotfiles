@@ -15,6 +15,10 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 # Plugins
 # =============================
 
+# <https://github.com/olets/zsh-abbr>
+[plugins.zsh-abbr]
+github = "olets/zsh-abbr"
+
 # <https://github.com/olets/zsh-window-title>
 [plugins.zsh-window-title]
 github = "olets/zsh-window-title"

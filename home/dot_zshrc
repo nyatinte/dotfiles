@@ -5,15 +5,14 @@ ZSH_CONFIG_DIR="${HOME}/.zsh.d"
 # 各設定ファイルを読み込み
 source "${ZSH_CONFIG_DIR}/path.zsh"
 
-# 補完システムの初期化（compdef を使うsourceより前に実行）
-fpath+=(${ZSH_CONFIG_DIR}/completions)
-autoload -Uz compinit && compinit
+# 補完関数の探索先。実際の compinit は sheldon 側で 1 回だけ実行する。
+fpath+=("${ZSH_CONFIG_DIR}/completions")
+# `git gtr` を git サブコマンド補完に出すための zstyle だけ先に登録する。
+zstyle ':completion:*:*:git:*' user-commands gtr:'Git worktree management'
 
 source "${ZSH_CONFIG_DIR}/dev-tools.zsh"
 source "${ZSH_CONFIG_DIR}/fzf.zsh"
 [ -f "${ZSH_CONFIG_DIR}/.local.zsh" ] && source "${ZSH_CONFIG_DIR}/.local.zsh"
-
-source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 
 # Sheldon
 eval "$(sheldon source)"

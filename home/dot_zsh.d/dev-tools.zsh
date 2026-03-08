@@ -5,7 +5,7 @@ export PROTO_AUTO_INSTALL=true
 export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"
 
 # Docker Desktop
-source "$HOME/.docker/init-zsh.sh" || true
+[ -r "$HOME/.docker/init-zsh.sh" ] && source "$HOME/.docker/init-zsh.sh"
 
 # ni - package manager
 export NI_DEFAULT_AGENT="pnpm"

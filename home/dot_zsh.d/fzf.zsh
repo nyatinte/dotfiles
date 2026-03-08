@@ -47,7 +47,7 @@ function fzf-cd-widget() {
     )
 
     if [[ -n "$selected" ]]; then
-        cd "$selected"
+        cd "$selected" || return
     fi
     zle reset-prompt
 }

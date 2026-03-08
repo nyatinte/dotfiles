@@ -12,7 +12,7 @@ gwn() {
             :
         fi
     fi
-    git gtr new "$branch_name" --from "origin/$default_branch" && cd "$(git gtr go "$branch_name")"
+    git gtr new "$branch_name" --from "origin/$default_branch" && cd "$(git gtr go "$branch_name")" || return
 }
 
 # 長時間コマンドの完了通知

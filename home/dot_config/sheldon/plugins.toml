@@ -15,6 +15,16 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 # Plugins
 # =============================
 
+# <https://github.com/olets/zsh-abbr>
+[plugins.zsh-abbr]
+github = "olets/zsh-abbr"
+
+[plugins.zsh-abbr.hooks]
+pre = '''
+export ABBR_USER_ABBREVIATIONS_FILE="${HOME}/.zsh.d/abbreviations"
+export ABBR_AUTOLOAD=0
+'''
+
 # <https://github.com/olets/zsh-window-title>
 [plugins.zsh-window-title]
 github = "olets/zsh-window-title"
@@ -30,6 +40,10 @@ apply = ["defer"]
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
+# <https://github.com/5A6F65/fast-abbr-highlighting>
+[plugins.fast-abbr-highlighting]
+github = "5A6F65/fast-abbr-highlighting"
+
 # <https://github.com/zsh-users/zsh-completions>
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
@@ -38,11 +52,6 @@ apply = ["defer"]
 # <https://github.com/zpm-zsh/ls>
 [plugins.zpm-zsh-ls]
 github = "zpm-zsh/ls"
-apply = ["defer"]
-
-# <https://github.com/MichaelAquilina/zsh-you-should-use>
-[plugins.zsh-you-should-use]
-github = "MichaelAquilina/zsh-you-should-use"
 apply = ["defer"]
 
 # <https://github.com/alexiszamanidis/zsh-git-fzf>
@@ -69,13 +78,6 @@ compinit -C
 # ==============================
 # Plugin Hooks
 # ==============================
-
-[plugins.zsh-you-should-use.hooks]
-pre = '''
-export YSU_MESSAGE_POSITION="after"
-export YSU_MODE=BESTMATCH
-export YSU_MESSAGE_FORMAT="$(tput setaf 6)「%command」$(tput sgr0)の既存の$(tput setaf 3)「%alias_type」$(tput sgr0)が見つかったよ。$(tput setaf 2)「%alias」$(tput sgr0)を使うといいよ $(tput sgr0) > 🐧"
-'''
 
 [plugins.zpm-zsh-ls.hooks]
 pre = '''

@@ -34,6 +34,10 @@ apply = ["defer"]
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 
+# <https://github.com/5A6F65/fast-abbr-highlighting>
+[plugins.fast-abbr-highlighting]
+github = "5A6F65/fast-abbr-highlighting"
+
 # <https://github.com/zsh-users/zsh-completions>
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"

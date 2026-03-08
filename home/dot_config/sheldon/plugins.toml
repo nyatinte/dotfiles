@@ -44,11 +44,6 @@ apply = ["defer"]
 github = "zpm-zsh/ls"
 apply = ["defer"]
 
-# <https://github.com/MichaelAquilina/zsh-you-should-use>
-[plugins.zsh-you-should-use]
-github = "MichaelAquilina/zsh-you-should-use"
-apply = ["defer"]
-
 # <https://github.com/alexiszamanidis/zsh-git-fzf>
 [plugins.zsh-git-fzf]
 github = "alexiszamanidis/zsh-git-fzf"
@@ -73,13 +68,6 @@ compinit -C
 # ==============================
 # Plugin Hooks
 # ==============================
-
-[plugins.zsh-you-should-use.hooks]
-pre = '''
-export YSU_MESSAGE_POSITION="after"
-export YSU_MODE=BESTMATCH
-export YSU_MESSAGE_FORMAT="$(tput setaf 6)「%command」$(tput sgr0)の既存の$(tput setaf 3)「%alias_type」$(tput sgr0)が見つかったよ。$(tput setaf 2)「%alias」$(tput sgr0)を使うといいよ $(tput sgr0) > 🐧"
-'''
 
 [plugins.zpm-zsh-ls.hooks]
 pre = '''

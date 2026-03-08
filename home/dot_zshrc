@@ -18,7 +18,7 @@ source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 # Sheldon
 eval "$(sheldon source)"
 
-source "${ZSH_CONFIG_DIR}/abbr.zsh"
+source "${ZSH_CONFIG_DIR}/utils.zsh"
 
 # Starship
 eval "$(starship init zsh)"

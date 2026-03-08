@@ -1,6 +1,6 @@
 abbr "c."="${VISUAL} ."
 abbr "cat"="bat"
-abbr "cc-yolo"="claude --dangerously-skip-permissions"
+abbr "cl-yolo"="claude --dangerously-skip-permissions"
 abbr "chz"="chezmoi"
 abbr "cl"="claude"
 abbr "g"="git"

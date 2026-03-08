@@ -1,1 +1,0 @@
-export ABBR_USER_ABBREVIATIONS_FILE="${ZSH_CONFIG_DIR}/abbreviations"

@@ -1,5 +1,14 @@
-# proto - version manager activation
-eval "$(proto activate zsh --no-shim)"
+# proto - version manager activation（バイナリ更新時のみ再生成）
+() {
+  local cache="${HOME}/.cache/zsh/proto_activate.zsh"
+  local bin
+  bin=$(whence -p proto 2>/dev/null)
+  if [[ -n $bin && ( ! -f $cache || $bin -nt $cache ) ]]; then
+    mkdir -p "${cache:h}"
+    proto activate zsh --no-shim >"$cache"
+  fi
+  [[ -f $cache ]] && source "$cache"
+}
 export PROTO_AUTO_INSTALL=true
 # Global npm packages PATH
 export PATH="$PROTO_HOME/tools/node/globals/bin:$PATH"

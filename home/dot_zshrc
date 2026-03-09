@@ -5,20 +5,26 @@ ZSH_CONFIG_DIR="${HOME}/.zsh.d"
 # 各設定ファイルを読み込み
 source "${ZSH_CONFIG_DIR}/path.zsh"
 
-# 補完システムの初期化（compdef を使うsourceより前に実行）
+# fpath に補完ディレクトリを追加（compinit は sheldon の compinit plugin が担当）
 fpath+=(${ZSH_CONFIG_DIR}/completions)
-autoload -Uz compinit && compinit
 
 source "${ZSH_CONFIG_DIR}/dev-tools.zsh"
 source "${ZSH_CONFIG_DIR}/fzf.zsh"
 [ -f "${ZSH_CONFIG_DIR}/.local.zsh" ] && source "${ZSH_CONFIG_DIR}/.local.zsh"
-
-source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 
 # Sheldon
 eval "$(sheldon source)"
 
 source "${ZSH_CONFIG_DIR}/utils.zsh"
 
-# Starship
-eval "$(starship init zsh)"
+# Starship（バイナリ更新時のみ再生成）
+() {
+  local cache="${HOME}/.cache/zsh/starship_init.zsh"
+  local bin
+  bin=$(whence -p starship 2>/dev/null)
+  if [[ -n $bin && ( ! -f $cache || $bin -nt $cache ) ]]; then
+    mkdir -p "${cache:h}"
+    starship init zsh >"$cache"
+  fi
+  [[ -f $cache ]] && source "$cache"
+}

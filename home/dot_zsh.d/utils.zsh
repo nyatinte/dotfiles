@@ -1,3 +1,5 @@
+alias reload='exec $SHELL -l'
+
 # Git worktree runner -- <https://github.com/coderabbitai/git-worktree-runner>
 gwn() {
     local branch_name="$1"

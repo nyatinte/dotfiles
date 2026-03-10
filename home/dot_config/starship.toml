@@ -26,7 +26,7 @@ $time\
 [](fg:#2a494c)\
 \n$character"""
 
-command_timeout = 2000
+command_timeout = 500  # 2000ms → 500ms: バージョン検出の上限を短縮
 scan_timeout = 30
 
 [directory]
@@ -54,6 +54,10 @@ format = '[[($all_status$ahead_behind )](fg:#ffffff bg:#7cb1a3)]($style)'
 symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
+# detect only when actual source files exist (not just package.json tooling)
+detect_files = []  # package.json alone is not enough (e.g. dotfiles with devDependencies)
+detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
+detect_folders = ["node_modules"]
 
 [rust]
 symbol = ""

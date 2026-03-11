@@ -5,15 +5,11 @@ ZSH_CONFIG_DIR="${HOME}/.zsh.d"
 # 各設定ファイルを読み込み
 source "${ZSH_CONFIG_DIR}/path.zsh"
 
-# 補完システムの初期化（compdef を使うsourceより前に実行）
 fpath+=(${ZSH_CONFIG_DIR}/completions)
-autoload -Uz compinit && compinit
 
 source "${ZSH_CONFIG_DIR}/dev-tools.zsh"
 source "${ZSH_CONFIG_DIR}/fzf.zsh"
 [ -f "${ZSH_CONFIG_DIR}/.local.zsh" ] && source "${ZSH_CONFIG_DIR}/.local.zsh"
-
-source "${ZSH_CONFIG_DIR}/completions/_git-gtr"
 
 # Sheldon
 eval "$(sheldon source)"

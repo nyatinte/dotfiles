@@ -8,9 +8,9 @@
  * ref: https://github.com/affaan-m/everything-claude-code#strategic-compaction
  */
 
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
+import fs from 'fs';
+import path from 'path';
+import os from 'os';
 
 const sessionsDir = path.join(os.homedir(), '.claude', 'sessions');
 const compactionLog = path.join(sessionsDir, 'compaction-log.txt');

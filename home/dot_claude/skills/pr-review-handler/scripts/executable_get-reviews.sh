@@ -1,7 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-: "${GH_HOST:=ghe.misosiru.io}"
 
 read -r PR_NUMBER REPO_OWNER REPO_NAME < <(
   gh pr view --json number,headRepository,headRepositoryOwner |
@@ -70,7 +69,7 @@ select(.comments.nodes | length > 0) |
 ""
 '
 
-RESULT=$(GH_HOST="${GH_HOST}" gh api graphql \
+RESULT=$(gh api graphql \
   -f query="$GRAPHQL_QUERY" \
   -f owner="$REPO_OWNER" \
   -f repo="$REPO_NAME" \

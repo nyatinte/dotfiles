@@ -179,8 +179,6 @@ bash skills/pr-review-handler/scripts/getreview.sh
 
 ## 注意事項
 
-- `getreview.sh`はGitHub Enterprise (`ghe.misosiru.io`) を使用しているため、環境に応じて調整が必要な場合がある
 - PR番号の取得は現在のブランチから自動的に行われる
 - スレッドごとにグループ化されるため、返信コメントも含めて表示される
 - 未解決のコメントのみを対象とする場合は、GraphQL APIを使用して`isResolved: false`のスレッドをフィルタリングする
-

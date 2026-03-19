@@ -1,16 +1,3 @@
-# Also register abbreviations as regular aliases (fallback before expansion)
-() {
-  local abbr_file="${ABBR_USER_ABBREVIATIONS_FILE:-$HOME/.zsh.d/abbreviations}"
-  [[ -f "$abbr_file" ]] || return
-  local line name value
-  while IFS= read -r line; do
-    [[ "$line" =~ '^abbr[[:space:]]+"([^"]+)"="(.*)"[[:space:]]*$' ]] || continue
-    name="${match[1]}"
-    value="${(e)match[2]}"
-    alias "${name}=${value}"
-  done < "$abbr_file"
-}
-
 # Git worktree runner -- <https://github.com/coderabbitai/git-worktree-runner>
 gwn() {
     local branch_name="$1"

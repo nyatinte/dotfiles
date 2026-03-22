@@ -8,6 +8,8 @@
 # --color-5: #2a494c (最も暗い青緑)
 
 format = """
+$cmd_duration\
+[↵](fg:#3b7981 dimmed)\n\
 [░▒▓](#b7e3b0)\
 [🐧 ](bg:#b7e3b0 fg:#2a494c)\
 [](bg:#a9d6b4 fg:#b7e3b0)\

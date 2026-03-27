@@ -17,3 +17,6 @@ export EDITOR="hx"
 
 # Lazygit
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
+
+ # Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

@@ -17,16 +17,12 @@ $git_branch\
 $git_status\
 [](fg:#7cb1a3 bg:#3b7981)\
 $nodejs\
-$rust\
 $python\
-$golang\
 $bun\
-[](fg:#3b7981 bg:#2a494c)\
-$time\
-[](fg:#2a494c)\
+[](fg:#3b7981)\
 \n$character"""
 
-command_timeout = 2000
+command_timeout = 1000
 scan_timeout = 30
 
 [directory]
@@ -55,18 +51,8 @@ symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
 
-[rust]
-symbol = ""
-style = "bg:#3b7981"  # --color-4 bg
-format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
-
 [python]
 symbol = ""
-style = "bg:#3b7981"  # --color-4 bg
-format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
-
-[golang]
-symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
 
@@ -74,12 +60,6 @@ format = '[[ $symbol ($version) ](fg:#b7e3b0 bg:#3b7981)]($style)'
 symbol = ""
 style = "bg:#3b7981"  # --color-4 bg
 format = '[[ $symbol ($version) ](fg:#b7e3b0  bg:#3b7981)]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#2a494c"  # --color-5 bg
-format = '[[  $time ](fg:#b7e3b0 bg:#2a494c)]($style)'
 
 [character]
 success_symbol = '[❯](bold #b7e3b0)'  # --color-1

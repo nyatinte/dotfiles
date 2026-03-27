@@ -10,16 +10,16 @@
 format = """
 [░▒▓](#b7e3b0)\
 [🐧 ](bg:#b7e3b0 fg:#2a494c)\
-[](bg:#a9d6b4 fg:#b7e3b0)\
+[](bg:#a9d6b4 fg:#b7e3b0)\
 $directory\
-[](fg:#a9d6b4 bg:#7cb1a3)\
+[](fg:#a9d6b4 bg:#7cb1a3)\
 $git_branch\
 $git_status\
-[](fg:#7cb1a3 bg:#3b7981)\
+[](fg:#7cb1a3 bg:#3b7981)\
 $nodejs\
 $python\
 $bun\
-[](fg:#3b7981)\
+[](fg:#3b7981)\
 \n$character"""
 
 command_timeout = 1000

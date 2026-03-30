@@ -15,8 +15,7 @@ pre-push:
           exit 1
         fi
 
-# pre-commit:
-# TODO: formatting checks
-# parallel: true
-# jobs:
-#   - run:
+pre-commit:
+  jobs:
+    - name: check chezmoi deletions
+      run: bash scripts/check-chezmoi-deletions.sh

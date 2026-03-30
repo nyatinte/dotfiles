@@ -18,4 +18,4 @@ pre-push:
 pre-commit:
   jobs:
     - name: check chezmoi deletions
-      run: bash scripts/check-chezmoi-deletions.sh
+      run: bun run scripts/check-chezmoi-deletions.ts

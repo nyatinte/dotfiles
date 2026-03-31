@@ -1,7 +1,7 @@
 ---
 name: pr-review-handler
 description: レビューコメントを受けて修正・返信する。未解決コメントを取得し、問題を分析し、修正案を提案し、コメント単位でコミットを作成し、手動での返信とresolveをガイドする。
-allowed-tools: Read(*), Glob(*), Grep(*), Edit(*), Write(REVIEW_NOTES_*.md), Bash(gh pr view *), Bash(gh api *), Bash(bash */.claude/skills/pr-review-handler/scripts/getreview.sh), Bash(git add *), Bash(git commit *), Bash(git log *), Bash(git status *), Bash(git diff *)
+allowed-tools: Read(*), Glob(*), Grep(*), Edit(*), Write(REVIEW_NOTES_*.md), Bash(gh pr view *), Bash(gh api *), Bash(bash */.claude/skills/pr-review-handler/scripts/get-review-threads.sh), Bash(bash */.claude/skills/pr-review-handler/scripts/get-reviews.sh), Bash(git add *), Bash(git commit *), Bash(git log *), Bash(git status *), Bash(git diff *)
 denied-tools: Bash(git push *), Bash(git reset --hard *)
 ---
 
@@ -24,10 +24,13 @@ denied-tools: Bash(git push *), Bash(git reset --hard *)
 
 ### Step 1: レビューコメントの取得
 
-まず、`getreview.sh`スクリプトを実行してPRのレビューコメントを取得します:
+以下の2つのスクリプトが利用可能です。状況に応じて使い分けてください:
+
+#### `get-review-threads.sh`（推奨）
+GraphQL APIを使用し、スレッドの解決/未解決ステータスを取得できます:
 
 ```bash
-bash .claude/skills/pr-review-handler/scripts/getreview.sh
+bash .claude/skills/pr-review-handler/scripts/get-review-threads.sh
 ```
 
 このスクリプトは以下を実行します:
@@ -193,4 +196,4 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 
 - PR番号の取得は現在のブランチから自動的に行われる
 - スレッドごとにグループ化されるため、返信コメントも含めて表示される
-- 未解決のコメントのみを対象とする場合は、GraphQL APIを使用して`isResolved: false`のスレッドをフィルタリングする
+- 未解決のコメントのみを対象とする場合は、`get-review-threads.sh`（GraphQL版）を使用して`isResolved`ステータスでフィルタリングする

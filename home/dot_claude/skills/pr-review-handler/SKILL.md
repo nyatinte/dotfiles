@@ -1,7 +1,7 @@
 ---
 name: pr-review-handler
 description: レビューコメントを受けて修正・返信する。未解決コメントを取得し、問題を分析し、修正案を提案し、コメント単位でコミットを作成し、手動での返信とresolveをガイドする。
-allowed-tools: Read(*), Glob(*), Grep(*), Edit(*), Write(REVIEW_NOTES_*.md), Bash(gh pr view *), Bash(gh api *), Bash(bash */.claude/skills/pr-review-handler/scripts/get-review-threads.sh), Bash(bash */.claude/skills/pr-review-handler/scripts/get-reviews.sh), Bash(git add *), Bash(git commit *), Bash(git log *), Bash(git status *), Bash(git diff *)
+allowed-tools: Read(*), Glob(*), Grep(*), Edit(*), Write(REVIEW_NOTES_*.md), Bash(gh pr view *), Bash(gh api *), Bash(bash */.claude/skills/pr-review-handler/scripts/get-review-threads.sh),Bash(git add *), Bash(git commit *), Bash(git log *), Bash(git status *), Bash(git diff *)
 denied-tools: Bash(git push *), Bash(git reset --hard *)
 ---
 

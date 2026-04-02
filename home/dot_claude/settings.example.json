@@ -85,5 +85,8 @@
     "command": "ccstatusline",
     "padding": 0
   },
-  "language": "japanese"
+  "language": "japanese",
+  "env": {
+    "CLAUDE_CODE_NO_FLICKER": "1"
+  }
 }

@@ -15,6 +15,9 @@ export NI_GLOBAL_AGENT="pnpm"
 export VISUAL="cursor"
 export EDITOR="hx"
 
+# Claude Code
+export CLAUDE_CODE_NO_FLICKER=1
+
 # Lazygit
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 

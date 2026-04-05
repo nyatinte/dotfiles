@@ -65,6 +65,27 @@ github = "ajeetdsouza/zoxide"
 use = ["zoxide.plugin.zsh"]
 apply = ["defer"]
 
+# <https://github.com/sindresorhus/pure>
+[plugins.pure]
+github = "sindresorhus/pure"
+use = ["async.zsh", "pure.zsh"]
+
+[plugins.pure.hooks]
+pre = '''
+PURE_PROMPT_SYMBOL="🐧 ❯"
+# Green palette (from Starship theme)
+# Forest Depth
+zstyle ':prompt:pure:path'           color '#7fad96'
+zstyle ':prompt:pure:git:branch'     color '#5bc4d4'
+zstyle ':prompt:pure:git:dirty'      color '#e5c07b'
+zstyle ':prompt:pure:git:arrow'      color '#a8d1a0'
+zstyle ':prompt:pure:git:stash'      color '#c678dd'
+zstyle ':prompt:pure:git:action'     color '#e06c75'
+zstyle ':prompt:pure:execution_time' color '#5c6370'
+zstyle ':prompt:pure:prompt:success' color '#98c379'
+zstyle ':prompt:pure:prompt:error'   color '#e06c75'
+'''
+
 [plugins.compinit]
 inline = '''
 autoload -Uz compinit

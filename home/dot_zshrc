@@ -15,6 +15,3 @@ source "${ZSH_CONFIG_DIR}/fzf.zsh"
 eval "$(sheldon source)"
 
 source "${ZSH_CONFIG_DIR}/utils.zsh"
-
-# Starship
-eval "$(starship init zsh)"

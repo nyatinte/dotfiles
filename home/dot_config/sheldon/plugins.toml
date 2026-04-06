@@ -1,7 +1,7 @@
 # Sheldon Plugin Configuration
 # https://sheldon.cli.rs/
 
-shell = "zsh" 
+shell = "zsh"
 
 # ref: <https://sheldon.cli.rs/Examples.html?highlight=defer#deferred-loading-of-plugins-in-zsh>
 [plugins.zsh-defer]

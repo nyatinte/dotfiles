@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Repository Overview
 
 This is a dotfiles repository managed by **chezmoi**. Chezmoi uses special file naming conventions:
+
 - `dot_` prefix → `.` (e.g., `dot_zshrc` → `~/.zshrc`)
 - `.tmpl` suffix → Template files processed with variables (e.g., `dot_gitconfig.tmpl`)
 

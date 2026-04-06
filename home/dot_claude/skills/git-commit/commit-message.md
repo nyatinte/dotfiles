@@ -6,7 +6,7 @@
 
 ### Whyを重視
 
- commit メッセージでは**Why**（なぜこの変更が必要か）に焦点を当てる。（どんな変更をしたかは commit の diff でわかるので、それを含める必要はない）
+commit メッセージでは**Why**（なぜこの変更が必要か）に焦点を当てる。（どんな変更をしたかは commit の diff でわかるので、それを含める必要はない）
 
 **Good**:
 
@@ -192,15 +192,16 @@ GraphQL Mutation（updateCounselingSettings）と
    ```md
    質問: 「pre-commitフックが失敗しました。どのように対応しますか?」
    選択肢:
+
    1. AIに修正を依頼する
-   2.  commit を再試行する
+   2. commit を再試行する
    3. --no-verifyを使用して commit を再試行する
    4. ユーザー自身が修正する
    ```
 
 3. **選択肢に応じた対応**:
    - **1. AIに修正を依頼**: エラーを解析し、修正案を提示・実施
-   - **2.  commit を再試行**: 再度 `git commit` を実行
+   - **2. commit を再試行**: 再度 `git commit` を実行
    - **3. --no-verifyを使用**: `git commit --no-verify` を実行（非推奨）
    - **4. ユーザー自身が修正**: 修正方法を案内して終了
 

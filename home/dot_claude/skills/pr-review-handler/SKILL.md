@@ -14,6 +14,7 @@ denied-tools: Bash(git push *), Bash(git reset --hard *)
 ## 使用タイミング
 
 このスキルを使用する場合:
+
 - PRにレビューコメントが寄せられ、体系的に対応したい場合
 - 未解決のレビューコメントを整理して順番に対応したい場合
 - 各コメントに対して修正とコミットを分けて管理したい場合
@@ -30,12 +31,14 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 ```
 
 このスクリプトは以下を実行します:
+
 1. 現在のブランチに対応するPR番号を取得 (`gh pr view --json number`)
 2. GitHub APIを使用してPRのレビューコメントを取得
 3. スレッドごとにコメントをグループ化
 4. ファイルパス、行番号、コメント内容を整形して表示
 
 **出力形式:**
+
 ```
 📁 src/utils/helper.ts:42 (position: 123)
 🧵 スレッドID: 123456
@@ -53,6 +56,7 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 - **スキップ対象**: 後で対応するコメント
 
 各コメントについて:
+
 - ファイルパスと行番号を確認
 - 該当コードを`Read`ツールで読み取り
 - レビューアーの意図を理解
@@ -88,14 +92,16 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 2. **コミットの作成**
    - コメント単位でコミットを作成
    - コミットメッセージは以下の形式を推奨:
+
      ```
      fix: [ファイル名] [修正内容の要約]
-     
+
      - [具体的な変更内容1]
      - [具体的な変更内容2]
-     
+
      Refs: #PR番号
      ```
+
    - コミットメッセージの書式ルールに従う（git-commit Skill の `commit-message.md` を参照）
 
 3. **変更の確認**
@@ -148,9 +154,11 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 **対応:** 修正完了
 
 **指摘内容:**
+
 > この関数はエラーハンドリングが不足しています。
 
 **修正内容:**
+
 - nullチェックを追加
 - エラーケースの処理を追加
 - テストケースを追加
@@ -158,6 +166,7 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 **コミット:** abc1234 - fix: helper.tsのエラーハンドリングを追加
 
 **返信:**
+
 > ご指摘ありがとうございます。nullチェックとエラーケースの処理を追加しました。
 
 ---

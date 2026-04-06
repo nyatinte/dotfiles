@@ -1,5 +1,4 @@
 onlyBuiltDependencies:
   - lefthook
 
-# マイナー・パッチまで完全固定（^ や ~ を使わない）
 save-exact: true

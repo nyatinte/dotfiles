@@ -15,7 +15,7 @@ BODY=$(tail -n+2 "$PR_MD")
 git push -u origin "$CURRENT_BRANCH"
 
 gh pr create \
-  --base "$BASE_BRANCH" \
-  --title "$TITLE" \
-  --body "$BODY" \
-  --draft
+	--base "$BASE_BRANCH" \
+	--title "$TITLE" \
+	--body "$BODY" \
+	--draft

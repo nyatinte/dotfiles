@@ -18,32 +18,32 @@ REFS=$(echo "${BRANCH:-}" | grep -oE '#[0-9]+|/[0-9]+|-[0-9]+' | grep -oE '[0-9]
 [[ -n "$REFS" ]] && echo "Refs: $REFS" && echo ""
 
 if ! git diff --cached --quiet; then
-  echo "=== staged (to be committed) ==="
-  git diff --cached --stat
-  echo ""
+	echo "=== staged (to be committed) ==="
+	git diff --cached --stat
+	echo ""
 fi
 
 if ! git diff --quiet; then
-  echo "=== unstaged ==="
-  git diff --stat
-  echo ""
+	echo "=== unstaged ==="
+	git diff --stat
+	echo ""
 fi
 
 echo "=== git log -5 ==="
 AUTHOR=$(git config user.email)
 if [[ -n "$AUTHOR" ]]; then
-  git log --oneline -5 --author="$AUTHOR"
+	git log --oneline -5 --author="$AUTHOR"
 else
-  git log --oneline -5
+	git log --oneline -5
 fi
 echo ""
 
 echo "=== git diff HEAD ==="
 if [[ "$NO_DIFF" == "true" ]]; then
-  echo "(--no-diff)"
+	echo "(--no-diff)"
 elif [[ $(git diff HEAD | wc -l) -gt 500 ]]; then
-  git diff HEAD | head -400
-  echo "..."
+	git diff HEAD | head -400
+	echo "..."
 else
-  git diff HEAD
+	git diff HEAD
 fi

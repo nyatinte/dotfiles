@@ -21,3 +21,6 @@ pre-commit:
     - name: shfmt
       glob: "*.{sh,bash,zsh}"
       run: shfmt -d {staged_files}
+    - name: vp check
+      glob: "*.{js,ts,tsx,jsx,vue,svelte}"
+      run: pnpm exec vp check --fix {staged_files}

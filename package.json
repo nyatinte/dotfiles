@@ -2,8 +2,8 @@
   "name": "dotfiles",
   "devDependencies": {
     "lefthook": "2.0.3",
-    "markdownlint-cli2": "^0.22.0",
-    "vite-plus": "^0.1.15"
+    "markdownlint-cli2": "0.22.0",
+    "vite-plus": "0.1.15"
   },
   "engines": {
     "node": "24.11.1"

@@ -39,7 +39,7 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 
 **出力形式:**
 
-```
+```text
 📁 src/utils/helper.ts:42 (position: 123)
 🧵 スレッドID: 123456
   🟢 reviewer_name: この関数はエラーハンドリングが不足しています。
@@ -93,7 +93,7 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
    - コメント単位でコミットを作成
    - コミットメッセージは以下の形式を推奨:
 
-     ```
+     ```text
      fix: [ファイル名] [修正内容の要約]
 
      - [具体的な変更内容1]
@@ -120,6 +120,7 @@ bash .claude/skills/pr-review-handler/scripts/getreview.sh
 2. **返信の投稿**
    - ユーザーに返信文を提示
    - 承認後、`gh api`で返信を投稿:
+
      ```bash
      gh api \
        repos/{owner}/{repo}/pulls/{pr_number}/comments/{comment_id}/replies \

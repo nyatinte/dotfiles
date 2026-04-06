@@ -19,5 +19,5 @@ pre-commit:
   parallel: true
   jobs:
     - name: shfmt
-      glob: "*.{sh,bash}"
+      glob: "*.{sh,bash,zsh}"
       run: shfmt -d {staged_files}

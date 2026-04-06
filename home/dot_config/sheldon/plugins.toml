@@ -18,6 +18,7 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 # <https://github.com/olets/zsh-abbr>
 [plugins.zsh-abbr]
 github = "olets/zsh-abbr"
+apply = ["defer"]
 
 [plugins.zsh-abbr.hooks]
 pre = '''
@@ -37,12 +38,15 @@ use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
 # <https://github.com/zdharma-continuum/fast-syntax-highlighting>
+# Must be deferred last among ZLE-dependent plugins so all widgets are registered first
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
+apply = ["defer"]
 
 # <https://github.com/5A6F65/fast-abbr-highlighting>
 [plugins.fast-abbr-highlighting]
 github = "5A6F65/fast-abbr-highlighting"
+apply = ["defer"]
 
 # <https://github.com/zsh-users/zsh-completions>
 [plugins.zsh-completions]

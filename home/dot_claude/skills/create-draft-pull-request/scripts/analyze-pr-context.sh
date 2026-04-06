@@ -24,12 +24,12 @@ echo ""
 
 echo "=== Existing PR (head=current branch) ==="
 if [[ -n "$CURRENT_BRANCH" ]]; then
-  PR_JSON=$(gh pr list --head "$CURRENT_BRANCH" --json number,url 2>/dev/null || true)
-  if echo "$PR_JSON" | grep -q '"number"'; then
-    echo "$PR_JSON" | jq -r '.[0] | "number: \(.number)\nurl: \(.url)"'
-  else
-    echo "none"
-  fi
+	PR_JSON=$(gh pr list --head "$CURRENT_BRANCH" --json number,url 2>/dev/null || true)
+	if echo "$PR_JSON" | grep -q '"number"'; then
+		echo "$PR_JSON" | jq -r '.[0] | "number: \(.number)\nurl: \(.url)"'
+	else
+		echo "none"
+	fi
 else
-  echo "none"
+	echo "none"
 fi

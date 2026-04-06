@@ -11,14 +11,14 @@ echo ""
 # コンフリクト状態の判定
 echo "=== conflict state ==="
 if [ -d "$(git rev-parse --git-dir)/rebase-merge" ] || [ -d "$(git rev-parse --git-dir)/rebase-apply" ]; then
-  echo "state: rebase"
+	echo "state: rebase"
 elif [ -f "$(git rev-parse --git-dir)/MERGE_HEAD" ]; then
-  echo "state: merge"
+	echo "state: merge"
 else
-  echo "state: none"
-  echo ""
-  echo "現在コンフリクトは発生していません"
-  exit 0
+	echo "state: none"
+	echo ""
+	echo "現在コンフリクトは発生していません"
+	exit 0
 fi
 echo ""
 
@@ -29,16 +29,16 @@ echo ""
 echo "=== conflicted files ==="
 CONFLICTED=$(git diff --name-only --diff-filter=U)
 if [[ -z "$CONFLICTED" ]]; then
-  echo "(no conflicted files)"
-  exit 0
+	echo "(no conflicted files)"
+	exit 0
 fi
 echo "$CONFLICTED"
 echo ""
 
 echo "=== conflict markers ==="
 for file in $CONFLICTED; do
-  MARKER_COUNT=$(grep -c '^<<<<<<<' "$file" 2>/dev/null || echo 0)
-  echo "$file: $MARKER_COUNT conflict(s)"
+	MARKER_COUNT=$(grep -c '^<<<<<<<' "$file" 2>/dev/null || echo 0)
+	echo "$file: $MARKER_COUNT conflict(s)"
 done
 echo ""
 
@@ -52,7 +52,7 @@ echo ""
 
 echo "=== file change history ==="
 for file in $CONFLICTED; do
-  echo "--- $file ---"
-  git log --oneline -5 --all -- "$file"
-  echo ""
+	echo "--- $file ---"
+	git log --oneline -5 --all -- "$file"
+	echo ""
 done

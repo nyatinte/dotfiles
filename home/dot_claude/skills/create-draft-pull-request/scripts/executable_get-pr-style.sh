@@ -13,7 +13,7 @@ echo ""
 echo "=== PR Body Samples ==="
 PR_NUMBERS=$(gh pr list --author @me --state merged --limit 3 --json number --jq '.[].number')
 for NUM in $PR_NUMBERS; do
-  echo "--- PR #${NUM} ---"
-  gh pr view "$NUM" --json title,body --jq '"Title: " + .title + "\n\nBody:\n" + .body'
-  echo ""
+	echo "--- PR #${NUM} ---"
+	gh pr view "$NUM" --json title,body --jq '"Title: " + .title + "\n\nBody:\n" + .body'
+	echo ""
 done

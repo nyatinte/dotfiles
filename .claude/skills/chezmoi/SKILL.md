@@ -47,7 +47,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 
 ### By OS
 
-```
+```gotemplate
 {{- if eq .chezmoi.os "darwin" }}
 # macOS config
 {{- end }}
@@ -59,7 +59,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 
 ### By hostname
 
-```
+```gotemplate
 {{- if hasPrefix .chezmoi.hostname "work-" }}
 # work machine config
 {{- end }}
@@ -67,7 +67,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 
 ### By environment variable
 
-```
+```gotemplate
 {{- if env "WORK_ENV" }}
 # when WORK_ENV is set
 {{- end }}
@@ -75,7 +75,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 
 ### Combined conditions
 
-```
+```gotemplate
 {{- if or (eq .chezmoi.os "darwin") (env "WORK_ENV") }}
 # macOS or when WORK_ENV is set
 {{- end }}
@@ -85,7 +85,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 
 When the target file itself uses `{{ }}` syntax (like mise, Jinja2, or Tera templates), escape the braces so chezmoi doesn't process them as Go template syntax:
 
-```
+```gotemplate
 SOME_VAR = "{{ "{{" }}env.OTHER_VAR{{ "}}" }}"
 ```
 
@@ -113,7 +113,7 @@ chezmoi apply --refresh-externals --force
 
 Conditionally remove files based on system variables:
 
-```
+```gotemplate
 {{- if eq .chezmoi.os "darwin" }}
 ~/.linux-only-config
 {{- end }}

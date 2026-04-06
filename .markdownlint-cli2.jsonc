@@ -1,0 +1,21 @@
+// markdownlint-cli2 configuration
+// oxfmt (via vite-plus) handles formatting, so disable conflicting rules
+{
+  "config": {
+    "default": true,
+    // Formatting rules handled by oxfmt
+    "MD009": false, // trailing-spaces
+    "MD010": false, // no-hard-tabs
+    "MD013": false, // line-length
+    "MD047": false, // single-trailing-newline
+    "MD049": false, // emphasis-style (asterisk vs underscore)
+    "MD050": false, // strong-style (asterisk vs underscore)
+    // Allow HTML (e.g. badge images in README)
+    "MD033": false, // no-inline-html
+    // Not all files need to start with h1 (CLAUDE.md uses @-includes)
+    "MD041": false  // first-line-heading
+  },
+  "ignores": [
+    "node_modules/**"
+  ]
+}

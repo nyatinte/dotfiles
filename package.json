@@ -1,11 +1,11 @@
 {
   "name": "dotfiles",
+  "devDependencies": {
+    "lefthook": "2.0.3",
+    "vite-plus": "^0.1.15"
+  },
   "engines": {
     "node": "24.11.1"
   },
-  "packageManager": "pnpm@10.33.0",
-"devDependencies": {
-    "lefthook": "2.0.3",
-    "vite-plus": "^0.1.15"
-  }
+  "packageManager": "pnpm@10.33.0"
 }

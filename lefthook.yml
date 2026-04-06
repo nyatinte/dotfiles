@@ -23,6 +23,4 @@ pre-commit:
       run: shfmt -d {staged_files}
     - name: vp check
       glob: "*.{js,ts,json,md,toml,yml,yaml}"
-      env:
-        PATH: "$PATH:./node_modules/.bin"
       run: vp check --fix {staged_files}

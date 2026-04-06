@@ -33,19 +33,20 @@ chezmoi edit ~/.local/share/chezmoi/.chezmoiremove  # Edit removal list
 
 ## File Naming
 
-| Prefix/Suffix | Effect |
-|---------------|--------|
-| `dot_` | Installed as `.` (`dot_gitconfig` → `~/.gitconfig`) |
-| `private_` | Restrictive permissions (600) |
-| `executable_` | Executable permissions (755) |
-| `.tmpl` | Processed as Go template |
-| `symlink_` | Creates symlink |
+| Prefix/Suffix | Effect                                              |
+| ------------- | --------------------------------------------------- |
+| `dot_`        | Installed as `.` (`dot_gitconfig` → `~/.gitconfig`) |
+| `private_`    | Restrictive permissions (600)                       |
+| `executable_` | Executable permissions (755)                        |
+| `.tmpl`       | Processed as Go template                            |
+| `symlink_`    | Creates symlink                                     |
 
 ## Machine-Specific Templates
 
 Convert a static file to a template by renaming with `.tmpl` suffix, then use conditionals:
 
 ### By OS
+
 ```
 {{- if eq .chezmoi.os "darwin" }}
 # macOS config
@@ -57,6 +58,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 ```
 
 ### By hostname
+
 ```
 {{- if hasPrefix .chezmoi.hostname "work-" }}
 # work machine config
@@ -64,6 +66,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 ```
 
 ### By environment variable
+
 ```
 {{- if env "WORK_ENV" }}
 # when WORK_ENV is set
@@ -71,6 +74,7 @@ Convert a static file to a template by renaming with `.tmpl` suffix, then use co
 ```
 
 ### Combined conditions
+
 ```
 {{- if or (eq .chezmoi.os "darwin") (env "WORK_ENV") }}
 # macOS or when WORK_ENV is set

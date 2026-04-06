@@ -21,3 +21,6 @@ pre-commit:
     - name: shfmt
       glob: "*.{sh,bash,zsh}"
       run: shfmt -d {staged_files}
+    - name: vp check
+      glob: "*.{js,ts,json,md,toml,yml,yaml}"
+      run: vp check --fix {staged_files}

@@ -1,3 +1,6 @@
+# ripgrep
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/rc"
+
 # proto - version manager activation
 eval "$(proto activate zsh --no-shim)"
 export PROTO_AUTO_INSTALL=true

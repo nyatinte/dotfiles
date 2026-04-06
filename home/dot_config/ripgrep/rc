@@ -1,0 +1,14 @@
+# Search hidden files/directories by default
+--hidden
+
+# Follow symlinks
+--follow
+
+# Smart case (case-insensitive unless pattern has uppercase)
+--smart-case
+
+# Exclude common directories
+--glob=!.git/*
+--glob=!node_modules/*
+--glob=!.next/*
+--glob=!dist/*

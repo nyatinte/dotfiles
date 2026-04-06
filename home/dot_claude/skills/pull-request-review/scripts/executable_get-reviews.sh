@@ -4,8 +4,8 @@ set -euo pipefail
 : "${GH_HOST:=ghe.misosiru.io}"
 
 read -r PR_NUMBER REPO_OWNER REPO_NAME < <(
-  gh pr view --json number,headRepository,headRepositoryOwner |
-  jq -r '[.number, .headRepositoryOwner.login, .headRepository.name] | @tsv'
+	gh pr view --json number,headRepository,headRepositoryOwner |
+		jq -r '[.number, .headRepositoryOwner.login, .headRepository.name] | @tsv'
 )
 
 readonly GRAPHQL_QUERY='
@@ -71,9 +71,9 @@ select(.comments.nodes | length > 0) |
 '
 
 RESULT=$(GH_HOST="${GH_HOST}" gh api graphql \
-  -f query="$GRAPHQL_QUERY" \
-  -f owner="$REPO_OWNER" \
-  -f repo="$REPO_NAME" \
-  -F number="$PR_NUMBER")
+	-f query="$GRAPHQL_QUERY" \
+	-f owner="$REPO_OWNER" \
+	-f repo="$REPO_NAME" \
+	-F number="$PR_NUMBER")
 
 echo "$RESULT" | jq -r "$JQ_FORMAT"

@@ -15,8 +15,9 @@ pre-push:
           exit 1
         fi
 
-# pre-commit:
-# TODO: formatting checks
-# parallel: true
-# jobs:
-#   - run:
+pre-commit:
+  parallel: true
+  jobs:
+    - name: shfmt
+      glob: "*.{sh,bash,zsh}"
+      run: shfmt -d {staged_files}

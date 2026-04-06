@@ -15,12 +15,12 @@ source "${ZSH_CONFIG_DIR}/tools/fzf.zsh"
 source "${ZSH_CONFIG_DIR}/tools/vite-plus.zsh"
 
 # Machine-local overrides
-[ -f "${ZSH_CONFIG_DIR}/.local.zsh" ] && source "${ZSH_CONFIG_DIR}/.local.zsh"
+[[ -f "${ZSH_CONFIG_DIR}/.local.zsh" ]] && source "${ZSH_CONFIG_DIR}/.local.zsh"
 
 # Plugins (Sheldon)
 eval "$(sheldon source)"
 
 # Functions
-for f in "${ZSH_CONFIG_DIR}/functions/"*.zsh; do
+for f in "${ZSH_CONFIG_DIR}/functions/"*.zsh(N); do
 	source "$f"
 done

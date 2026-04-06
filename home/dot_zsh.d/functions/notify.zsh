@@ -2,10 +2,10 @@
 notify-after() {
 	"$@"
 	local exit_code=$?
-	if [ $exit_code -eq 0 ]; then
-		cmux notify --title "✓ Command Complete" --body "$1"
+	if (( exit_code == 0 )); then
+		cmux notify --title "✓ Command Complete" --body "$*"
 	else
-		cmux notify --title "✗ Command Failed" --body "$1 (exit $exit_code)"
+		cmux notify --title "✗ Command Failed" --body "$* (exit $exit_code)"
 	fi
 	return $exit_code
 }

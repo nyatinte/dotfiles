@@ -1,2 +1,9 @@
 onlyBuiltDependencies:
   - lefthook
+
+# バージョンカタログ: マイナー・パッチまで完全固定（^ や ~ なし）
+# package.json で "catalog:" プロトコルを使って参照する
+catalog:
+  lefthook: "2.0.3"
+  markdownlint-cli2: "0.22.0"
+  vite-plus: "0.1.15"

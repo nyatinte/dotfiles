@@ -9,7 +9,7 @@ source "${ZSH_CONFIG_DIR}/core/env.zsh"
 fpath+=(${ZSH_CONFIG_DIR}/completions)
 
 # Tools
-source "${ZSH_CONFIG_DIR}/tools/proto.zsh"
+source "${ZSH_CONFIG_DIR}/tools/mise.zsh"
 source "${ZSH_CONFIG_DIR}/tools/docker.zsh"
 source "${ZSH_CONFIG_DIR}/tools/fzf.zsh"
 source "${ZSH_CONFIG_DIR}/tools/vite-plus.zsh"

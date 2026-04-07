@@ -38,7 +38,6 @@ use = ["{{ name }}.zsh"]
 apply = ["defer"]
 
 # <https://github.com/zdharma-continuum/fast-syntax-highlighting>
-# Must be deferred last among ZLE-dependent plugins so all widgets are registered first
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
 apply = ["defer"]

@@ -1,0 +1,9 @@
+[settings]
+idiomatic_version_files = true
+auto_install = true
+
+[tools]
+node = "lts"
+bun = "latest"
+python = "latest"
+pnpm = "latest"

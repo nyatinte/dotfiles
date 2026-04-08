@@ -6,3 +6,4 @@ auto_install = true
 node = "lts"
 bun = "latest"
 python = "latest"
+pnpm = "latest"

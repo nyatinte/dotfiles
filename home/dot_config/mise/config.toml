@@ -1,6 +1,7 @@
 [settings]
 idiomatic_version_file = true
 auto_install = true
+install_before = "1d"
 
 [settings.npm]
 package_manager = "pnpm"

@@ -1,7 +1,9 @@
 [settings]
 idiomatic_version_file = true
 auto_install = true
-npm_installer = "pnpm"
+
+[settings.npm]
+package_manager = "pnpm"
 
 [tools]
 node = "lts"

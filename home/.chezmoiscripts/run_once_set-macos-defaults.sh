@@ -21,6 +21,10 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # New Finder windows open ~/Developer
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Developer"
+# Default view: list view
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+# Show full POSIX path in Finder title bar
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # === Keyboard ===
 # Key repeat speed (2 = near maximum; system default is 6)

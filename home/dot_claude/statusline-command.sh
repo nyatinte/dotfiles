@@ -47,12 +47,18 @@ if [ "$total_in" -gt 0 ] || [ "$total_out" -gt 0 ]; then
   cost_str="$cost"
 fi
 
+# --- ANSI colors ---
+cyan="\033[36m"
+magenta="\033[35m"
+dim="\033[2m"
+reset="\033[0m"
+
 # --- build status line ---
 out="$cwd_display"
-[ -n "$git_branch" ] && out="$out  $git_branch"
-[ -n "$git_worktree" ] && out="$out [$git_worktree]"
-[ -n "$model_short" ] && out="$out | $model_short"
-[ -n "$ctx_str" ] && out="$out | $ctx_str"
-[ -n "$cost_str" ] && out="$out | $cost_str"
+[ -n "$git_branch" ] && out="$out  ${magenta}${git_branch}${reset}"
+[ -n "$git_worktree" ] && out="$out [${git_worktree}]"
+[ -n "$model_short" ] && out="$out | ${cyan}${model_short}${reset}"
+[ -n "$ctx_str" ] && out="$out | ${dim}${ctx_str}${reset}"
+[ -n "$cost_str" ] && out="$out | ${dim}${cost_str}${reset}"
 
-printf "%s" "$out"
+printf "%b" "$out"

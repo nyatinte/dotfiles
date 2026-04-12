@@ -41,6 +41,10 @@ defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
 
+# === Startup ===
+# Mute the startup chime
+sudo nvram StartupMute=%01
+
 # === Storage ===
 # Automatically remove items from the Downloads folder after 30 days
 defaults write com.apple.StorageManagement RemoveDownloadsAfter30Days -bool true

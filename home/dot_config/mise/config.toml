@@ -1,6 +1,10 @@
 [settings]
 idiomatic_version_file = true
 auto_install = true
+install_before = "1d"
+
+[settings.npm]
+package_manager = "pnpm"
 
 [tools]
 node = "lts"
@@ -11,3 +15,10 @@ fd = "latest"
 eza = "latest"
 lazygit = "latest"
 fzf = "latest"
+"npm:difit" = "latest"
+"npm:ccusage" = "latest"
+"npm:portless" = "latest"
+"npm:vite-plus" = "latest"
+"npm:skills" = "latest"
+"npm:agent-browser" = "latest"
+"npm:@antfu/ni" = "latest"

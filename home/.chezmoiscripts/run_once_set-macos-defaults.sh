@@ -36,6 +36,11 @@ defaults write com.apple.dock autohide -bool true
 # Remove "Recent Applications" section from Dock
 defaults write com.apple.dock show-recents -bool false
 
+# === Hot Corners ===
+# Bottom-right corner → Show Desktop (hides all windows, shows desktop)
+defaults write com.apple.dock wvous-br-corner -int 4
+defaults write com.apple.dock wvous-br-modifier -int 0
+
 # === Screenshots ===
 # Save screenshots to ~/Pictures/Screenshots instead of Desktop
 mkdir -p "${HOME}/Pictures/Screenshots"

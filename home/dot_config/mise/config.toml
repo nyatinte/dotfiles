@@ -1,5 +1,5 @@
 [settings]
-idiomatic_version_files = true
+idiomatic_version_file = true
 auto_install = true
 
 [tools]

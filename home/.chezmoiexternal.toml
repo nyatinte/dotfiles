@@ -1,0 +1,5 @@
+["Library/Fonts/Moralerspace"]
+  type = "archive"
+  url = "https://github.com/yuru7/moralerspace/releases/download/v2.0.0/Moralerspace_v2.0.0.zip"
+  stripComponents = 1
+  refreshPeriod = "720h"

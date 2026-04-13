@@ -1,0 +1,26 @@
+# Brewfile - managed by chezmoi
+# Usage: brew bundle --global
+
+# ==============================
+# Formulas
+# ==============================
+
+brew "bat"        # cat with syntax highlighting (fzf preview)
+brew "chezmoi"    # dotfiles manager
+brew "gh"         # GitHub CLI
+brew "git-delta"  # git diff viewer
+brew "helix"      # modal text editor ($EDITOR)
+brew "ripgrep"    # fast grep (used by fzf/zsh)
+brew "sheldon"    # zsh plugin manager
+brew "shfmt"      # shell script formatter
+brew "zellij"     # terminal multiplexer
+brew "zoxide"     # smart cd
+
+# ==============================
+# Casks
+# ==============================
+
+cask "codex"      # OpenAI Codex
+cask "orbstack"   # Docker/VM environment
+cask "raycast"    # launcher
+cask "t3-code"    # T3 Code editor

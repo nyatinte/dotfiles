@@ -21,7 +21,7 @@ Readツールで対象のMarkdownファイルを読み込む。
 チェックスクリプトを実行する。
 
 ```bash
-bash $CLAUDE_SKILL_DIR/scripts/check_document.sh <ファイルパス>
+bash ${CLAUDE_SKILL_DIR}/scripts/check_document.sh <ファイルパス>
 ```
 
 このスクリプトは `assets/.textlintrc` の設定を使用し、以下のAI Slopパターンを検出する。
@@ -74,7 +74,7 @@ textlintの結果とユーザーからの確認内容に基づき、以下を実
 修正後、チェックスクリプトを再実行して問題が解消されたことを確認する。
 
 ```bash
-bash $CLAUDE_SKILL_DIR/scripts/check_document.sh <ファイルパス>
+bash ${CLAUDE_SKILL_DIR}/scripts/check_document.sh <ファイルパス>
 ```
 
 すべてのチェックに合格するまで、手順4〜6を繰り返す。

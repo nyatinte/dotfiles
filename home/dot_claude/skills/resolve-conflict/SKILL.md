@@ -13,7 +13,7 @@ Git merge/rebase で発生したコンフリクトを分析し、解決方針を
 
 ## 手順
 
-1. `Bash($CLAUDE_SKILL_DIR/scripts/analyze-conflict.sh)` を実行してコンフリクト状態を確認
+1. `Bash(${CLAUDE_SKILL_DIR}/scripts/analyze-conflict.sh)` を実行してコンフリクト状態を確認
    - コンフリクト状態でない場合、ユーザーに通知して終了
 2. 各コンフリクトファイルの内容を `Read` で読み込み、コンフリクトマーカー(`<<<<<<<`, `=======`, `>>>>>>>`)の箇所を特定
 3. 変更の背景を理解するため情報収集:

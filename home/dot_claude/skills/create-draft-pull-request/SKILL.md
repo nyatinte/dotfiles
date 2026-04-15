@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read(*), Glob(*), Grep(*), Write(PR.md), Edit(PR.md), Bash(git log * -n *), Bash(git diff *), Bash(gh pr edit *), Bash(bash */.claude/skills/create-draft-pull-request/scripts/check-branch.sh), Bash(bash */.claude/skills/create-draft-pull-request/scripts/get-pr-style.sh), Bash(bash */.claude/skills/create-draft-pull-request/scripts/push-and-create-pr.sh *)
+allowed-tools: Read(*), Glob(*), Grep(*), Write(PR.md), Edit(PR.md), Bash(git log * -n *), Bash(git diff *), Bash(gh pr edit *), Bash(bash *.claude/skills/create-draft-pull-request/scripts/check-branch.sh), Bash(bash *.claude/skills/create-draft-pull-request/scripts/get-pr-style.sh), Bash(bash *.claude/skills/create-draft-pull-request/scripts/push-and-create-pr.sh *)
 denied-tools: Bash(git push * -f *), Bash(git push * --force *)
 description: 現在のブランチからPR説明文を生成し、承認後にGitHub PRを作成。ユーザーから PR 作成を依頼された場合や、実装作業完了時に PR 作成したほうが良いと思われる場合に使用。
 argument-hint: "[オプション: PR作成時の追加コンテキストや指示 / Auto: true にすると AskUserQuestion を使わず自動でPRを作成する (default: false)]"

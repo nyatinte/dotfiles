@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read(*), Edit(*), Bash(git status *), Bash(git diff *), Bash(git log *), Bash(git show *), Bash(git branch *), Bash(git ls-files -u *), Bash(git add *), Bash(git checkout --ours *), Bash(git checkout --theirs *), Bash(git rebase --continue), Bash(git merge --continue), Bash(git rebase --abort), Bash(git merge --abort), Bash(gh pr list *), Bash(gh pr view *), Bash(bash */.claude/skills/resolve-conflict/scripts/analyze-conflict.sh)
+allowed-tools: Read(*), Edit(*), Bash(git status *), Bash(git diff *), Bash(git log *), Bash(git show *), Bash(git branch *), Bash(git ls-files -u *), Bash(git add *), Bash(git checkout --ours *), Bash(git checkout --theirs *), Bash(git rebase --continue), Bash(git merge --continue), Bash(git rebase --abort), Bash(git merge --abort), Bash(gh pr list *), Bash(gh pr view *), Bash(bash *.claude/skills/resolve-conflict/scripts/analyze-conflict.sh)
 denied-tools: Bash(git push *), Bash(git reset --hard *)
 description: コンフリクトを解決するための支援コマンド
 argument-hint: "[オプション: 解決の方針に関する追加コンテキスト]"

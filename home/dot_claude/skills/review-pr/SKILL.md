@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read(*), Glob(*), Grep(*), Write(.claude/reviews/*), Bash(gh pr view *), Bash(gh pr diff *), Bash(gh issue view *), Bash(bash */.claude/skills/fix-review/scripts/get-review-threads.sh),Bash(mkdir */.claude/reviews/*)
+allowed-tools: Read(*), Glob(*), Grep(*), Write(.claude/reviews/*), Bash(gh pr view *), Bash(gh pr diff *), Bash(gh issue view *), Bash(bash *.claude/skills/fix-review/scripts/get-review-threads.sh),Bash(mkdir *.claude/reviews/*)
 denied-tools: Bash(git push *), Bash(git commit *), Bash(git checkout *), Bash(git reset *), Edit(*)
 description: PRのコードレビューを実施するときに使用。PRの概要から既存レビューコメントの確認、変更コードの分析まで行い、ユーザーと共同しながらレビューコメントを生成する。
 argument-hint: "[オプション: レビュー観点やフォーカスしたい領域]"

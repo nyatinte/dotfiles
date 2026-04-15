@@ -1,7 +1,7 @@
 ---
 name: document-writing
 description: 日本語Markdownドキュメントに含まれるAI Slopを検出・修正するスキル。Markdownファイル(.md)の作成・編集時に自動適用され、textlintの@textlint-ja/textlint-rule-preset-ai-writingルールでAI臭い表現（誇張表現、機械的強調、過剰装飾）を検出し、自然な日本語に修正させる。
-allowed-tools: Read(*), Edit(*), Bash(bash */.claude/skills/document-writing/scripts/check_document.sh *)
+allowed-tools: Read(*), Edit(*), Bash(bash *.claude/skills/document-writing/scripts/check_document.sh *)
 ---
 
 # AI Slop除去スキル

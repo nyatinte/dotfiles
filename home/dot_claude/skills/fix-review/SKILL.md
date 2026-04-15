@@ -33,7 +33,7 @@ denied-tools: Bash(git push *), Bash(git reset --hard *)
 GraphQL APIを使用し、スレッドの解決/未解決ステータスを取得できます:
 
 ```bash
-bash .claude/skills/fix-review/scripts/get-review-threads.sh
+bash $CLAUDE_SKILL_DIR/scripts/get-review-threads.sh
 ```
 
 このスクリプトは以下を実行します:

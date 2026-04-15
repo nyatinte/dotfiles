@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read(*), Edit(*), Bash(git status *), Bash(git diff *), Bash(git log *), Bash(git show *), Bash(git branch *), Bash(git ls-files -u *), Bash(git add *), Bash(git checkout --ours *), Bash(git checkout --theirs *), Bash(git rebase --continue), Bash(git merge --continue), Bash(git rebase --abort), Bash(git merge --abort), Bash(gh pr list *), Bash(gh pr view *), Bash(bash */.claude/skills/resolve-conflict/scripts/analyze-conflict.sh)
+allowed-tools: Read(*), Edit(*), Bash(git status *), Bash(git diff *), Bash(git log *), Bash(git show *), Bash(git branch *), Bash(git ls-files -u *), Bash(git add *), Bash(git checkout --ours *), Bash(git checkout --theirs *), Bash(git rebase --continue), Bash(git merge --continue), Bash(git rebase --abort), Bash(git merge --abort), Bash(gh pr list *), Bash(gh pr view *), Bash(bash *.claude/skills/resolve-conflict/scripts/analyze-conflict.sh)
 denied-tools: Bash(git push *), Bash(git reset --hard *)
 description: コンフリクトを解決するための支援コマンド
 argument-hint: "[オプション: 解決の方針に関する追加コンテキスト]"
@@ -13,7 +13,7 @@ Git merge/rebase で発生したコンフリクトを分析し、解決方針を
 
 ## 手順
 
-1. `Bash(.claude/skills/resolve-conflict/scripts/analyze-conflict.sh)` を実行してコンフリクト状態を確認
+1. `Bash(bash ${CLAUDE_SKILL_DIR}/scripts/analyze-conflict.sh)` を実行してコンフリクト状態を確認
    - コンフリクト状態でない場合、ユーザーに通知して終了
 2. 各コンフリクトファイルの内容を `Read` で読み込み、コンフリクトマーカー(`<<<<<<<`, `=======`, `>>>>>>>`)の箇所を特定
 3. 変更の背景を理解するため情報収集:

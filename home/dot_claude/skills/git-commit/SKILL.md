@@ -1,5 +1,5 @@
 ---
-allowed-tools: Read(*), Bash(git commit *), Bash(git log *), Bash(git diff *), Bash(git status *), Bash(git branch *), Bash(git add *), Bash(bash */.claude/skills/git-commit/scripts/analyze-git-diff.sh *), Bash(sh *)
+allowed-tools: Read(*), Bash(git commit *), Bash(git log *), Bash(git diff *), Bash(git status *), Bash(git branch *), Bash(git add *), Bash(bash *.claude/skills/git-commit/scripts/analyze-git-diff.sh *), Bash(sh *.claude/skills/git-commit/scripts/analyze-git-diff.sh *)
 denied-tools: Bash(git push *)
 description: 現在の差分に基づいて git commit を作成する。 ユーザーから commit を依頼された場合や、タスク完了時に commit したほうが良い場合に使用。
 argument-hint: "[Context: commit message に含めるべき Context, Auto: true にすると AskUserQuestion を一切使わず自動で commit する (default: false) ]"

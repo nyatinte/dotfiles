@@ -1,7 +1,7 @@
 ---
 name: fix-review
 description: レビューコメントを受けて修正・返信する。未解決コメントを取得し、問題を分析し、修正案を提案し、コメント単位でコミットを作成し、手動での返信とresolveをガイドする。
-allowed-tools: Read(*), Glob(*), Grep(*), Edit(*), Write(REVIEW_NOTES_*.md), Bash(gh pr view *), Bash(gh api *), Bash(bash */.claude/skills/fix-review/scripts/get-review-threads.sh),Bash(git add *), Bash(git commit *), Bash(git log *), Bash(git status *), Bash(git diff *)
+allowed-tools: Read(*), Glob(*), Grep(*), Edit(*), Write(REVIEW_NOTES_*.md), Bash(gh pr view *), Bash(gh api *), Bash(bash *.claude/skills/fix-review/scripts/get-review-threads.sh),Bash(git add *), Bash(git commit *), Bash(git log *), Bash(git status *), Bash(git diff *)
 denied-tools: Bash(git push *), Bash(git reset --hard *)
 ---
 
@@ -33,7 +33,7 @@ denied-tools: Bash(git push *), Bash(git reset --hard *)
 GraphQL APIを使用し、スレッドの解決/未解決ステータスを取得できます:
 
 ```bash
-bash .claude/skills/fix-review/scripts/get-review-threads.sh
+bash ${CLAUDE_SKILL_DIR}/scripts/get-review-threads.sh
 ```
 
 このスクリプトは以下を実行します:

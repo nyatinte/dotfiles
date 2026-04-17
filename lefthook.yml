@@ -27,3 +27,5 @@ pre-commit:
     - name: markdownlint
       glob: "**/*.md"
       run: pnpm exec markdownlint-cli2 {staged_files}
+    - name: secretlint
+      run: pnpm exec secretlint {staged_files}

@@ -7,22 +7,27 @@ install_before = "1d"
 package_manager = "pnpm"
 
 [tools]
+# Languages & package managers
 node = "lts"
 bun = "latest"
 python = "latest"
 pnpm = "latest"
+
+# Tools
 bat = "latest"
 delta = "latest"
-fd = "latest"
 eza = "latest"
+fd = "latest"
+fzf = "latest"
 gh = "latest"
 helix = "latest"
 lazygit = "latest"
-fzf = "latest"
 ripgrep = "latest"
 shfmt = "latest"
 zellij = "latest"
 zoxide = "latest"
+
+# npm packages
 "npm:difit" = "latest"
 "npm:ccusage" = "latest"
 "npm:portless" = "latest"

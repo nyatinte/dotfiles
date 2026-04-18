@@ -1,0 +1,318 @@
+{
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "terminal.integrated.inheritEnv": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "python.experiments.optInto": [],
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "jupyter.askForKernelRestart": false,
+  "[r]": {
+    "editor.defaultFormatter": "REditorSupport.r"
+  },
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "workbench.startupEditor": "none",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true,
+    "python": true,
+    "rust": true
+  },
+  "redhat.telemetry.enabled": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.external.osxExec": "Warp.app",
+  "[python]": {
+    // 拡張機能のBlack Formatterを使う場合には必ず指定する
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    // ファイルの保存時にフォーマットを自動実行する場合
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "files.associations": {
+    "*.rmd": "markdown",
+    "*.css": "css"
+  },
+  // tailwindcssの設定 intelisenseが効く様にする
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "rufo.exe": "rufo", // can be an absolute path
+  "rufo.useBundler": false,
+  "explorer.confirmDelete": false,
+  "ruby.rubocop.executePath": "",
+  "ruby.rubocop.onSave": true,
+  "git.confirmSync": false,
+  "diffEditor.renderSideBySide": false,
+  "genieai.promptPrefix.findProblems": "Find problems with the following code.  Please answer in Japanese.",
+  "python.analysis.autoImportCompletions": true,
+  "githubPullRequests.pullBranch": "never",
+  "editor.rename.enablePreview": false,
+  "git.openRepositoryInParentFolders": "never",
+  "editor.fontFamily": "\"Moralerspace Neon NF\", Menlo, 'Courier New', Monaco, monospace, 'HackGen Console NF'",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  "cSpell.userWords": [
+    "Authed",
+    "datetime",
+    "Firestore",
+    "heroicons",
+    "Huri",
+    "jobpost",
+    "kanban",
+    "lucide",
+    "Multinomial",
+    "Nakamura",
+    "sklearn",
+    "tailwindcss",
+    "Takumi",
+    "Thum",
+    "TRPC",
+    "unext",
+    "upsert"
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "editor.linkedEditing": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "errorLens.excludeBySource": [
+    "Markuplint(invalid-attr)",
+    "Markuplint(permitted-contents)",
+    "ts(2322)"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.stickyScroll.enabled": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.editor.labelFormat": "short",
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.editor.labelFormat"
+  ],
+  "svelte.enable-ts-plugin": true,
+  // ---------- Language ----------
+  "[tex]": {
+    // スニペット補完中にも補完を使えるようにする
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    // インデント幅を2にする
+    "editor.tabSize": 2
+  },
+  "[latex]": {
+    // スニペット補完中にも補完を使えるようにする
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    // インデント幅を2にする
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "[bibtex]": {
+    // インデント幅を2にする
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  // ---------- LaTeX Workshop ----------
+  // 使用パッケージのコマンドや環境の補完を有効にする
+  "latex-workshop.intellisense.package.enabled": true,
+  // 生成ファイルを削除するときに対象とするファイル
+  // デフォルト値に "*.synctex.gz" を追加
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.snm",
+    "*.nav",
+    "*.dvi",
+    "*.synctex.gz"
+  ],
+  // 生成ファイルを "out" ディレクトリに吐き出す
+  "latex-workshop.latex.outDir": "out",
+  // ビルドのレシピ
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    }
+  ],
+  // ビルドのレシピに使われるパーツ
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-silent",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
+  "workbench.editor.empty.hint": "hidden",
+  "git.autofetch": true,
+  "workbench.sideBar.location": "right",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "markdown-image.base.codeType": "HTML",
+  "window.zoomLevel": 1,
+  "discord.detailsDebugging": "Hello :)",
+  "discord.detailsEditing": "Hello :)",
+  "discord.lowerDetailsNoWorkspaceFound": "Hello :)",
+  "discord.lowerDetailsDebugging": "Hello :)",
+  "discord.lowerDetailsEditing": "Hello :)",
+  "discord.removeRemoteRepository": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.chat.localeOverride": "ja",
+  "gotoNextPreviousMember.symbolKinds": [
+    "function",
+    "string",
+    "variable"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.wordWrap": "on",
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signals.noInlayHints": {
+    "sound": "off"
+  },
+  "accessibility.signals.notebookCellCompleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "off"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "security.promptForLocalFileProtocolHandling": false,
+  "editor.accessibilitySupport": "off",
+  "editor.inlayHints.fontSize": 2,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "accessibility.signals.progress": {
+    "sound": "off"
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.colorTheme": "Houston",
+  "security.promptForRemoteFileProtocolHandling": false,
+  "git.suggestSmartCommit": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "solid",
+  "github.copilot.advanced": {},
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "cline.preferredLanguage": "Japanese - 日本語",
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show",
+    "nr",
+    "npx prisma generate"
+  ],
+  "github.copilot.chat.codeGeneration.instructions": [],
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.testGeneration.instructions": [],
+  "chat.tools.autoApprove": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.fontFamily": "\"Moralerspace Krypton NF\"",
+  "diffEditor.experimental.showMoves": true,
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
+  "editor.codeLensFontFamily": "\"Moralerspace Radon NF\"",
+  "docker.extension.enableComposeLanguageServer": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "claudeCode.useTerminal": true,
+  "chat.tools.terminal.autoApprove": {
+    "pnpm": true,
+    "true": true,
+    "git add": true,
+    "git commit": true,
+    "gh": true,
+    "git checkout": true
+  },
+}

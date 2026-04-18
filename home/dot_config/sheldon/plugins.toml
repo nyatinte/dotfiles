@@ -64,9 +64,7 @@ apply = ["defer"]
 
 # <https://github.com/ajeetdsouza/zoxide>
 [plugins.zoxide]
-github = "ajeetdsouza/zoxide"
-use = ["zoxide.plugin.zsh"]
-apply = ["defer"]
+inline = 'eval "$(zoxide init zsh --cmd cd)"'
 
 # <https://github.com/sindresorhus/pure>
 [plugins.pure]

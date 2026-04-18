@@ -17,7 +17,7 @@ source "${ZSH_CONFIG_DIR}/tools/vite-plus.zsh"
 # Machine-local overrides
 [[ -f "${ZSH_CONFIG_DIR}/.local.zsh" ]] && source "${ZSH_CONFIG_DIR}/.local.zsh"
 
-# Plugins (Sheldon)
+# Plugins (Sheldon) - includes compinit
 eval "$(sheldon source)"
 
 # Functions

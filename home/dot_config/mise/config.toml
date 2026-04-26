@@ -26,6 +26,7 @@ ripgrep = "latest"
 shfmt = "latest"
 zellij = "latest"
 zoxide = "latest"
+carapace = "latest"
 
 # npm packages
 "npm:difit" = "latest"

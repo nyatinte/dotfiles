@@ -97,6 +97,14 @@ done
 compinit -C
 '''
 
+# <https://carapace.sh>
+[plugins.carapace]
+inline = '''
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+'''
+
 # ==============================
 # Plugin Hooks
 # ==============================

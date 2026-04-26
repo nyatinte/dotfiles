@@ -62,11 +62,6 @@ apply = ["defer"]
 github = "zpm-zsh/ls"
 apply = ["defer"]
 
-# <https://github.com/alexiszamanidis/zsh-git-fzf>
-[plugins.zsh-git-fzf]
-github = "alexiszamanidis/zsh-git-fzf"
-apply = ["defer"]
-
 # <https://github.com/ajeetdsouza/zoxide>
 [plugins.zoxide]
 inline = 'eval "$(zoxide init zsh --cmd cd)"'

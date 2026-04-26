@@ -31,6 +31,11 @@ export ABBR_AUTOLOAD=0
 github = "olets/zsh-window-title"
 apply = ["defer"]
 
+# <https://github.com/Aloxaf/fzf-tab>
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+apply = ["defer"]
+
 # <https://github.com/zsh-users/zsh-autosuggestions>
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"

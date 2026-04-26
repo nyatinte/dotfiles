@@ -20,6 +20,9 @@ source "${ZSH_CONFIG_DIR}/tools/vite-plus.zsh"
 # Plugins (Sheldon) - includes compinit
 eval "$(sheldon source)"
 
+# fzf-tab: load directly after sheldon (after compinit, before deferred plugins)
+source ~/.zsh.d/plugins/fzf-tab/fzf-tab.plugin.zsh
+
 # Functions
 for f in "${ZSH_CONFIG_DIR}/functions/"*.zsh(N); do
 	source "$f"

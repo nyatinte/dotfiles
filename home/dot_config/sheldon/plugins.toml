@@ -64,7 +64,7 @@ apply = ["defer"]
 
 # <https://github.com/ajeetdsouza/zoxide>
 [plugins.zoxide]
-inline = 'eval "$(zoxide init zsh --cmd cd)"'
+inline = "zsh-defer -c 'eval \"$(zoxide init zsh --cmd cd)\"'"
 
 # <https://github.com/sindresorhus/pure>
 [plugins.pure]

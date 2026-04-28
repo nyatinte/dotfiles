@@ -28,6 +28,7 @@ zellij = "latest"
 zoxide = "latest"
 carapace = "latest"
 ghq = "latest"
+glow = "latest"
 
 # npm packages
 "npm:difit" = "latest"

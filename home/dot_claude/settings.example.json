@@ -82,7 +82,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "ccstatusline",
+    "command": "ccline",
     "padding": 0
   },
   "language": "japanese",

@@ -1,18 +1,48 @@
 # Brewfile - managed by chezmoi
 # Usage: brew bundle --global
+# Regenerate after installing/removing tools: brew bundle dump --force --file=$HOME/.Brewfile
 
-# ==============================
-# Formulas
-# ==============================
-
-brew "chezmoi"    # dotfiles manager
-brew "sheldon"    # zsh plugin manager
-
-# ==============================
-# Casks
-# ==============================
-
-cask "codex"      # OpenAI Codex
-cask "orbstack"   # Docker/VM environment
-cask "raycast"    # launcher
-cask "t3-code"    # T3 Code editor
+tap "abue-ammar/tinycast", trusted: true
+tap "anomalyco/tap"
+tap "hashicorp/tap"
+tap "yuzeguitarist/deck"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# CLI proxy to minimize LLM token consumption
+brew "rtk"
+# Fast, configurable, shell plugin manager
+brew "sheldon"
+# Terminal multiplexer
+brew "tmux"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode", trusted: true
+# Terraform
+brew "hashicorp/tap/terraform", trusted: true
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
+# AI coding agent desktop client
+cask "opencode-desktop"
+# Replacement for Docker Desktop
+cask "orbstack"
+# LLM server built on MLX
+cask "osaurus"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Minimal GUI for AI code agents
+cask "t3-code"
+# Tiny, fully native launcher, hotkeys, and clipboard history
+cask "abue-ammar/tinycast/tinycast"
+npm "@textlint-ja/textlint-rule-preset-ai-writing"
+npm "corepack"
+npm "textlint-rule-preset-ja-spacing"
+npm "textlint"

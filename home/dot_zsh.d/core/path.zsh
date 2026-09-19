@@ -15,4 +15,5 @@ path=(
 	$HOME/.bun/bin
 	$HOME/.opencode/bin
 	$HOME/.antigravity/antigravity/bin
+	$HOME/Library/pnpm/bin
 )

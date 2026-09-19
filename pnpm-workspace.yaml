@@ -1,4 +1,8 @@
-onlyBuiltDependencies:
-  - lefthook
+allowBuilds:
+  lefthook: true
 
-save-exact: true
+# pnpm is installed explicitly (standalone native binary) and its version is
+# managed outside the project, so don't record/enforce it in the lockfile.
+pmOnFail: ignore
+
+saveExact: true

@@ -37,6 +37,10 @@ file, which chezmoi keeps in sync:
 - install / update / remove: `skills add <owner/repo> --skill <name> -g`, `skills update -g`, `skills remove -g`
 - restore on a new machine: `home/.chezmoiscripts/run_once_install-global-skills.sh`
 - keep skill bodies and generated files unmanaged: see `home/.chezmoiignore`
+- full procedure: see the `managing-skills` project skill at `.claude/skills/managing-skills/`
+
+Project skills for this repo live in `.claude/skills/` and are git-tracked. Codex
+does not read that directory, so symlink each one into `.agents/skills/`.
 
 ## Development Policy
 

@@ -19,15 +19,6 @@
       "installedAt": "2026-04-12T15:03:13.110Z",
       "updatedAt": "2026-09-19T06:29:43.077Z"
     },
-    "write-a-skill": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "write-a-skill/SKILL.md",
-      "skillFolderHash": "2f252b35aa238879afc5a230ac30343708dee0b3",
-      "installedAt": "2026-04-12T15:03:40.958Z",
-      "updatedAt": "2026-04-12T15:03:40.958Z"
-    },
     "orca-cli": {
       "source": "stablyai/orca",
       "sourceType": "github",
@@ -43,8 +34,9 @@
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
       "skillFolderHash": "3d35cd438f4067b03c8b3792e038960e4ac11526",
+      "pluginName": "mattpocock-skills",
       "installedAt": "2026-04-26T17:42:16.116Z",
-      "updatedAt": "2026-09-19T06:29:44.647Z"
+      "updatedAt": "2026-09-19T07:39:14.361Z"
     },
     "computer-use": {
       "source": "stablyai/orca",
@@ -54,6 +46,108 @@
       "skillFolderHash": "335986bf5b78557d5d6973eea183eeb2dc527eba",
       "installedAt": "2026-09-07T15:31:47.376Z",
       "updatedAt": "2026-09-19T06:30:49.371Z"
+    },
+    "i-have-adhd": {
+      "source": "ayghri/i-have-adhd",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
+      "skillPath": "skills/i-have-adhd/SKILL.md",
+      "skillFolderHash": "72dc6e3e9d0f8d906579a235edb7b2a402d7b8e1",
+      "installedAt": "2026-09-19T07:38:59.541Z",
+      "updatedAt": "2026-09-19T07:38:59.541Z"
+    },
+    "visual-pr": {
+      "source": "humanlayer/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/humanlayer/skills.git",
+      "skillPath": "plugins/visual-pr/skills/visual-pr/SKILL.md",
+      "skillFolderHash": "2104d685d33ba9594a4dfe13241f0f7f02190401",
+      "installedAt": "2026-09-19T07:39:09.966Z",
+      "updatedAt": "2026-09-19T07:39:09.966Z"
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "skillFolderHash": "eedaf2562c83155115e9c649fa3ecaac2e10e81d",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-09-19T07:39:14.360Z",
+      "updatedAt": "2026-09-19T07:39:14.360Z"
+    },
+    "tdd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/tdd/SKILL.md",
+      "skillFolderHash": "79288be15c67b849f22b6572056601090fd20913",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-09-19T07:39:14.363Z",
+      "updatedAt": "2026-09-19T07:39:14.363Z"
+    },
+    "ponytail": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail/SKILL.md",
+      "skillFolderHash": "cb6e53477eaf04e6daeca22feacb85f9ce20d40c",
+      "installedAt": "2026-09-19T07:39:14.646Z",
+      "updatedAt": "2026-09-19T07:39:14.646Z"
+    },
+    "ponytail-audit": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail-audit/SKILL.md",
+      "skillFolderHash": "19744a9490abb0f5d0f18c6e39e3a3eb50f4daa1",
+      "installedAt": "2026-09-19T07:39:14.647Z",
+      "updatedAt": "2026-09-19T07:39:14.647Z"
+    },
+    "ponytail-debt": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail-debt/SKILL.md",
+      "skillFolderHash": "fe9ea82cad2b42a9c244acc275c9091c414ff528",
+      "installedAt": "2026-09-19T07:39:14.647Z",
+      "updatedAt": "2026-09-19T07:39:14.647Z"
+    },
+    "ponytail-gain": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail-gain/SKILL.md",
+      "skillFolderHash": "13724e1903f76456164f00ec2a3074848433588f",
+      "installedAt": "2026-09-19T07:39:14.647Z",
+      "updatedAt": "2026-09-19T07:39:14.647Z"
+    },
+    "ponytail-help": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail-help/SKILL.md",
+      "skillFolderHash": "b7df7bc32b6e4e8bbde8acb2ef3c97ee7e7638f7",
+      "installedAt": "2026-09-19T07:39:14.648Z",
+      "updatedAt": "2026-09-19T07:39:14.648Z"
+    },
+    "ponytail-review": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail-review/SKILL.md",
+      "skillFolderHash": "dc6d9660c4297496a9220de377f6f7df38ab1a53",
+      "installedAt": "2026-09-19T07:39:14.648Z",
+      "updatedAt": "2026-09-19T07:39:14.648Z"
+    },
+    "writing-for-agents": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/writing-for-agents/SKILL.md",
+      "skillFolderHash": "ad2925850efb8973a72d2e666f7a975f9a2d4a9b",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-09-19T07:45:17.061Z",
+      "updatedAt": "2026-09-19T07:45:17.061Z"
     }
   },
   "dismissed": {

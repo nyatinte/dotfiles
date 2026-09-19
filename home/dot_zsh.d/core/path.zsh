@@ -13,5 +13,7 @@ path=(
 	/Library/Apple/usr/bin
 	$HOME/.local/bin
 	$HOME/.bun/bin
+	$HOME/.opencode/bin
 	$HOME/.antigravity/antigravity/bin
+	$HOME/Library/pnpm/bin
 )

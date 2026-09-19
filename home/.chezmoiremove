@@ -1,2 +1,8 @@
 .config/starship.toml
 .config/ccstatusline
+.claude/scripts
+.claude/settings.example.json
+.claude/CLAUDE.md
+.config/cmux
+.zsh.d/sheldon-cache.zsh
+.config/raycast/scripts

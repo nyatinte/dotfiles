@@ -1,0 +1,22 @@
+# Agent skills are installed and managed by the `skills` CLI (https://skills.sh).
+#
+# chezmoi only manages the global lock file so that new machines can restore the
+# same set of skills:
+#   ~/.agents/.skill-lock.json  ->  home/dot_agents/dot_skill-lock.json
+#
+# Skill bodies under ~/.agents/skills and ~/.claude/skills are intentionally NOT
+# tracked here, otherwise chezmoi and the skills CLI overwrite each other.
+.agents/skills
+.claude/skills
+
+# Machine-local / generated files that must stay unmanaged.
+.config/opencode/node_modules
+.config/opencode/package.json
+.config/opencode/package-lock.json
+.config/opencode/bun.lock
+.config/opencode/.gitignore
+.config/opencode/opencode-notifier-state.json
+.config/zed/prompts
+.config/zed/themes
+.zsh.d/completions/_bat
+.zsh.d/completions/_opencode

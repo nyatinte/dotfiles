@@ -2,3 +2,5 @@ path.zsh
 dev-tools.zsh
 fzf.zsh
 utils.zsh
+functions/git.zsh
+completions/_git-gtr

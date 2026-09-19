@@ -2,10 +2,10 @@
 notify-after() {
 	"$@"
 	local exit_code=$?
-	if (( exit_code == 0 )); then
-		cmux notify --title "✓ Command Complete" --body "$*"
+	if ((exit_code == 0)); then
+		osascript -e "display notification \"$*\" with title \"✓ Command Complete\""
 	else
-		cmux notify --title "✗ Command Failed" --body "$* (exit $exit_code)"
+		osascript -e "display notification \"$* (exit $exit_code)\" with title \"✗ Command Failed\""
 	fi
 	return $exit_code
 }

@@ -55,8 +55,11 @@
       "Bash(chezmoi diff *)",
       "Bash(mise list *)",
       "Bash(mise search *)",
-      "Bash(plutil -p *)"
+      "Bash(plutil -p *)",
+      "Read(~/.claude/skills/**)",
+      "Read(~/.agents/skills/**)"
     ],
+    "additionalDirectories": ["~/.claude/skills", "~/.agents/skills"],
     "deny": [
       "Bash(rm -rf /)",
       "Bash(sudo:*)",

@@ -1,2 +1,3 @@
 .config/starship.toml
 .config/ccstatusline
+.claude/scripts

@@ -1,6 +1,8 @@
 .config/starship.toml
 .config/ccstatusline
 .claude/scripts
+.claude/hooks/notify.sh
+.claude/hooks/suggest-compact.js
 .claude/settings.example.json
 .claude/CLAUDE.md
 .config/cmux

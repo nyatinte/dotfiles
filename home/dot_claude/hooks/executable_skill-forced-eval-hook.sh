@@ -19,6 +19,10 @@
 # 	}
 # }
 
+# SKIP
+exit 0
+# Because this hook does't needed to run for every prompt, we can skip it by default. If you want to force skill evaluation for every prompt, remove the "exit 0" line.
+
 cat <<'EOF'
 INSTRUCTION: MANDATORY SKILL ACTIVATION SEQUENCE
 

@@ -5,3 +5,4 @@
 .claude/CLAUDE.md
 .config/cmux
 .zsh.d/sheldon-cache.zsh
+.config/raycast/scripts

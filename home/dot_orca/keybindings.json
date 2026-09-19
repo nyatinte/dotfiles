@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "keybindings": {},
+  "platforms": {
+    "darwin": {
+      "tab.nextSameType": [
+        "Mod+Shift+BracketRight"
+      ],
+      "tab.previousSameType": [
+        "Mod+Shift+BracketLeft"
+      ],
+      "tab.nextAllTypes": [
+        "Mod+Alt+BracketRight"
+      ],
+      "tab.previousAllTypes": [
+        "Mod+Alt+BracketLeft"
+      ],
+      "workspace.openBoard": [
+        "DoubleTap+Mod"
+      ],
+      "floatingTerminal.toggle": [
+        "DoubleTap+Ctrl"
+      ]
+    },
+    "linux": {},
+    "win32": {}
+  }
+}

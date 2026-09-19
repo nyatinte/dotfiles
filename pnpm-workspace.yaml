@@ -1,8 +1,9 @@
 allowBuilds:
   lefthook: true
 
-# pnpm is installed explicitly (standalone native binary) and its version is
-# managed outside the project, so don't record/enforce it in the lockfile.
+# pnpm itself is managed by mise (see home/dot_config/mise/config.toml) and its
+# version is pinned via package.json's packageManager field, so don't
+# record/enforce it in the lockfile.
 pmOnFail: ignore
 
 saveExact: true

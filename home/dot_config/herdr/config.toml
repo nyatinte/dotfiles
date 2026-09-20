@@ -1,0 +1,49 @@
+onboarding = false
+
+[terminal]
+# default_shell は未指定 → $SHELL を使う
+# shell_mode = "auto" が既定で、macOS ではログインシェルとして起動する
+new_cwd = "home"
+
+[theme]
+name = "tokyo-night"
+auto_switch = true
+light_name = "tokyo-night-day"
+dark_name = "tokyo-night"
+
+[ui]
+agent_panel_sort = "priority"
+
+[ui.toast]
+delivery = "system"
+
+# Agent パネル: 状態 + 端末タイトル + 置き場所の 3 行
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  ["state_icon", "agent", "state_text"],
+  ["terminal_title_stripped"],
+  ["workspace", "tab"],
+]
+
+[ui.sidebar.agents.rows_by_agent]
+claude = [
+  ["state_icon", "agent", "state_text"],
+  ["terminal_title_stripped"],
+  ["workspace", "tab"],
+]
+
+# キーバインドは prefix = "ctrl+b" の既定のまま（一覧は prefix+? ）
+[[keys.command]]
+key = "prefix+alt+g"
+type = "popup"
+command = "lazygit"
+description = "run lazygit"
+width = "80%"
+height = "80%"
+
+[experimental]
+kitty_graphics = true
+reveal_hidden_cursor_for_cjk_ime = true
+cjk_ime_agents = ["claude", "pi", "codex"]
+switch_ascii_input_source_in_prefix = true

@@ -347,6 +347,24 @@
       "skillFolderHash": "03a61aa306b3e481861d5cfea6d206435a99c187",
       "installedAt": "2026-09-19T11:31:09.092Z",
       "updatedAt": "2026-09-19T11:31:09.092Z"
+    },
+    "archify": {
+      "source": "tt-a1i/archify",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tt-a1i/archify.git",
+      "skillPath": "archify/SKILL.md",
+      "skillFolderHash": "ffb8258f653b66f5afb8340bf8eb61c7309830ff",
+      "installedAt": "2026-09-19T14:48:57.086Z",
+      "updatedAt": "2026-09-19T14:48:57.086Z"
+    },
+    "archify-review": {
+      "source": "tt-a1i/archify",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/tt-a1i/archify.git",
+      "skillPath": ".agents/skills/archify-review/SKILL.md",
+      "skillFolderHash": "cd88f8830b8452dde849fdb792b4abd04ebf2cf1",
+      "installedAt": "2026-09-19T14:48:57.088Z",
+      "updatedAt": "2026-09-19T14:48:57.088Z"
     }
   },
   "dismissed": {

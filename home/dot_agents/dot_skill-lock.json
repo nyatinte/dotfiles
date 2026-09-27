@@ -220,20 +220,20 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/heygen-com/hyperframes.git",
       "skillPath": "skills/hyperframes-cli/SKILL.md",
-      "skillFolderHash": "8444dc8e6653aeaed1c0d0872fdb7408212b0063",
+      "skillFolderHash": "9938c5cf4a739a0f8d23df16270e44935dd1b3be",
       "pluginName": "core-skills",
       "installedAt": "2026-09-19T11:31:09.086Z",
-      "updatedAt": "2026-09-19T11:31:09.086Z"
+      "updatedAt": "2026-09-20T15:39:04.699Z"
     },
     "hyperframes-core": {
       "source": "heygen-com/hyperframes",
       "sourceType": "github",
       "sourceUrl": "https://github.com/heygen-com/hyperframes.git",
       "skillPath": "skills/hyperframes-core/SKILL.md",
-      "skillFolderHash": "d518869436278caebd81a3b9428449824599f829",
+      "skillFolderHash": "f50555497cde15917075d0e20e01773524210d6d",
       "pluginName": "core-skills",
       "installedAt": "2026-09-19T11:31:09.086Z",
-      "updatedAt": "2026-09-19T11:31:09.086Z"
+      "updatedAt": "2026-09-20T15:39:04.701Z"
     },
     "hyperframes-creative": {
       "source": "heygen-com/hyperframes",

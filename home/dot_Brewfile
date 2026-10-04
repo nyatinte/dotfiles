@@ -5,6 +5,7 @@
 tap "abue-ammar/tinycast", trusted: true
 tap "anomalyco/tap"
 tap "hashicorp/tap"
+tap "lightpanda-io/browser"
 tap "yuzeguitarist/deck"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
@@ -12,6 +13,8 @@ brew "chezmoi"
 brew "git-filter-repo"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Headless browser engine for agent-browser
+brew "lightpanda-io/browser/lightpanda"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # CLI proxy to minimize LLM token consumption

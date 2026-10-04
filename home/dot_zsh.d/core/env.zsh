@@ -5,5 +5,6 @@ export NI_DEFAULT_AGENT="pnpm"
 export NI_GLOBAL_AGENT="pnpm"
 
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
+export AGENT_BROWSER_ENGINE="lightpanda"
 
 export PNPM_HOME="$HOME/Library/pnpm"

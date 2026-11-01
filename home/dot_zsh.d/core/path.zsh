@@ -12,6 +12,7 @@ path=(
 	/usr/local/sbin
 	/Library/Apple/usr/bin
 	$HOME/.local/bin
+	$HOME/.vite-plus/bin
 	$HOME/.bun/bin
 	$HOME/.opencode/bin
 	$HOME/.antigravity/antigravity/bin

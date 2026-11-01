@@ -18,5 +18,4 @@
 .config/opencode/opencode-notifier-state.json
 .config/zed/prompts
 .config/zed/themes
-.zsh.d/completions/_bat
 .zsh.d/completions/_opencode

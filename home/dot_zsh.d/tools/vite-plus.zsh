@@ -1,6 +1,5 @@
-# PATH and the `vp` wrapper are already set up in ~/.zshenv.
-# Re-sourcing here is only needed to register the completion, which requires
-# compinit. It spawns `vp`, so keep it off the startup path.
-if [[ -f "${HOME}/.vite-plus/env" ]]; then
-	zsh-defer source "${HOME}/.vite-plus/env"
+# PATH and the `vp` wrapper are set up in ~/.zshenv and core/path.zsh.
+# Registering completions requires compinit and spawns `vp`, so defer it.
+if (($+functions[compdef])) && (($+commands[vp])); then
+	zsh-defer -c 'eval "$(VP_COMPLETE=zsh command vp)"' 2>/dev/null
 fi

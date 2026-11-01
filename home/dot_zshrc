@@ -13,7 +13,7 @@ fpath+=(${ZSH_CONFIG_DIR}/completions)
 eval "$(sheldon source)"
 
 # Tools (ordered after Sheldon so zsh-defer is available)
-source "${ZSH_CONFIG_DIR}/tools/mise.zsh"
+source "${ZSH_CONFIG_DIR}/tools/fnm.zsh"
 source "${ZSH_CONFIG_DIR}/tools/fzf.zsh"
 source "${ZSH_CONFIG_DIR}/tools/vite-plus.zsh"
 

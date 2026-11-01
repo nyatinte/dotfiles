@@ -99,10 +99,10 @@ compinit -C
 
 # <https://carapace.sh>
 [plugins.carapace]
+# `carapace _carapace` takes ~30ms; register its completions after the prompt.
 inline = '''
-export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-source <(carapace _carapace)
+zsh-defer -c 'export CARAPACE_BRIDGES="zsh,fish,bash,inshellisense"; source <(carapace _carapace)'
 '''
 
 # ==============================

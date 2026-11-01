@@ -102,6 +102,15 @@
       "skillFolderHash": "106d618c482e1c851936db53dbff4a6c958ffb34",
       "installedAt": "2026-11-01T01:50:56.535Z",
       "updatedAt": "2026-11-01T01:50:56.535Z"
+    },
+    "explain-before-shorten": {
+      "source": "nyatinte/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nyatinte/dotfiles.git",
+      "skillPath": ".claude/skills/explain-before-shorten/SKILL.md",
+      "skillFolderHash": "96d7513bff1d40cb5304396bba558c400dc28e70",
+      "installedAt": "2026-11-01T04:07:20.365Z",
+      "updatedAt": "2026-11-01T04:07:20.365Z"
     }
   },
   "dismissed": {

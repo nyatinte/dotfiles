@@ -103,15 +103,6 @@
       "installedAt": "2026-11-01T01:50:56.535Z",
       "updatedAt": "2026-11-01T01:50:56.535Z"
     },
-    "explain-before-shorten": {
-      "source": "nyatinte/dotfiles",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/nyatinte/dotfiles.git",
-      "skillPath": ".claude/skills/explain-before-shorten/SKILL.md",
-      "skillFolderHash": "96d7513bff1d40cb5304396bba558c400dc28e70",
-      "installedAt": "2026-11-01T04:07:20.365Z",
-      "updatedAt": "2026-11-01T04:07:20.365Z"
-    },
     "t3-code-delegation": {
       "source": "ryoppippi/dotfiles",
       "sourceType": "github",
@@ -120,6 +111,24 @@
       "skillFolderHash": "39f6b68011654758bc6481534a4788b8c4a708cb",
       "installedAt": "2026-11-01T04:24:34.803Z",
       "updatedAt": "2026-11-01T04:24:34.803Z"
+    },
+    "explain-before-shorten": {
+      "source": "nyatinte/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nyatinte/dotfiles.git",
+      "skillPath": ".claude/skills/explain-before-shorten/SKILL.md",
+      "skillFolderHash": "96d7513bff1d40cb5304396bba558c400dc28e70",
+      "installedAt": "2026-11-02T07:30:27.069Z",
+      "updatedAt": "2026-11-02T07:30:27.069Z"
+    },
+    "gh-attach": {
+      "source": "nyatinte/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nyatinte/dotfiles.git",
+      "skillPath": ".claude/skills/gh-attach/SKILL.md",
+      "skillFolderHash": "b42cc98255b873db00d5af2ceb3986b1035cdb73",
+      "installedAt": "2026-11-02T07:30:27.071Z",
+      "updatedAt": "2026-11-02T07:30:27.071Z"
     }
   },
   "dismissed": {

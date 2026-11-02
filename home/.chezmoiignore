@@ -10,6 +10,7 @@
 .claude/skills
 
 # Machine-local / generated files that must stay unmanaged.
+.claude/CLAUDE.md
 .config/opencode/node_modules
 .config/opencode/package.json
 .config/opencode/package-lock.json
